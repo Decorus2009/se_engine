@@ -3,8 +3,6 @@
 #include <curl/curl.h>
 #include "se_engine.h"
 
-
-//HELLO GIT!!
 size_t write_response_data(char *ptr, size_t size, size_t nmemb, void *userdata)
 {
     std::stringstream* s = (std::stringstream*)userdata;
@@ -21,8 +19,6 @@ struct File {
  
 static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream)
 {
-
-	
   struct File *out = (struct File *)stream;
 
   if(out && !out->stream) {
@@ -46,7 +42,7 @@ int main(int argc, char* argv[])
 			return 0;
 		} 
 
-		File my_xml_file = {"test.xml", /* name to store the file as if successful */ NULL	};
+		File my_xml_file = {"/home/decorus/Dropbox/CSC/Practice/I/se_engine/test.xml", /* name to store the file as if successful */ NULL	};
 
     CURL *curl = NULL;
     curl = curl_easy_init();
@@ -64,12 +60,9 @@ int main(int argc, char* argv[])
 				std::cout << terminal_query << std::endl;
 
         se_engine se_test(terminal_query);
-
-				std::cout << "******************URL******************" << std::endl;
 				std::cout << se_test.get_url() << std::endl;
-				std::cout << "******************REQUEST BODY******************" << std::endl;
-				std::cout << se_test.get_request() << std::endl << std::endl;
-				std::cout << "******************RUNNING A REQUEST******************" << std::endl;
+				std::cout << se_test.get_request() << std::endl;
+				std::cout << "RUNNING A REQUESTS" << std::endl << std::endl;
 
        //request a HTTP POST
         curl_easy_setopt(curl, CURLOPT_POST, 1);
@@ -87,11 +80,11 @@ int main(int argc, char* argv[])
         std::stringstream content_stream;
 
 
-	      curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, &write_response_data);
-	      curl_easy_setopt(curl, CURLOPT_WRITEDATA, &content_stream);
+//	      curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, &write_response_data);
+//	      curl_easy_setopt(curl, CURLOPT_WRITEDATA, &content_stream);
 
-//        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, my_fwrite);
-//       curl_easy_setopt(curl, CURLOPT_WRITEDATA, &my_xml_file);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, my_fwrite);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &my_xml_file);
 
 
         CURLcode code = curl_easy_perform(curl);
@@ -99,15 +92,25 @@ int main(int argc, char* argv[])
         curl_easy_cleanup(curl);
 
 
+//				fseek(my_xml_file, 0, SEEK_END);   // non-portable
+//		    size_t my_xml_file_size = ftell(my_xml_file.stream);
+
+
+// 		    my_xml_file.seekg(0, std::ifstream::end);
+//	 	    size_t my_xml_file_size = my_xml_file.stream->tellg();
+ 			
+//				std::cout << "MY XML FILE SIZE: " << my_xml_file_size << " bytes" << std::endl;	
+
 				
 				//проверка размера content_stream
-				content_stream.seekg(0, std::ios::end);
-				int size_of_content_stream = content_stream.tellg();
+//				content_stream.seekg(0, std::ios::end);
+//				int size_of_content_stream = content_stream.tellg();
 
-				std::cout << "size_of_content_stream " << size_of_content_stream << " bytes" << std::endl << std::endl;
+//				std::cout << "size_of_content_stream " << size_of_content_stream << " bytes" << std::endl << std::endl;
 
-        std::cout << "CONTENT STREAM" << std::endl << std::endl;
-        std::cout << content_stream.str() << std::endl;
+
+//        std::cout << "CONTENT STREAM" << std::endl << std::endl;
+//        std::cout << content_stream.str() << std::endl;
 
     }
 
