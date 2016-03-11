@@ -4,8 +4,6 @@
 #include "se_engine.h"
 
 
-//HELLO GIT!!! check
-//DEVELOP BRANCH!
 size_t write_response_data(char *ptr, size_t size, size_t nmemb, void *userdata)
 {
     std::stringstream* s = (std::stringstream*)userdata;
