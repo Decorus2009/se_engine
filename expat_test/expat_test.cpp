@@ -58,6 +58,7 @@ int main(int argc, char *argv[]) {
     int len = (int)fread(buf, 1, sizeof(buf), f);
 
     done = len < sizeof(buf);
+
     if (XML_Parse(parser, buf, len, done) == XML_STATUS_ERROR) {
       fprintf(stderr,
               "%s at line %" XML_FMT_INT_MOD "u\n",
