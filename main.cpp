@@ -79,7 +79,7 @@ int main(int argc, char* argv[]) {
 		fputs(xml_content_stream.str().c_str(), outff);
 		fclose(outff);
 		
-		xml_parse(xml_content_stream);
+		xml_parser::xml_parse(xml_content_stream);
 
     }
 
