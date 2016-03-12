@@ -2,96 +2,65 @@
 #include <sstream>
 #include <curl/curl.h>
 #include "se_engine.h"
+#include "xml_parser.h"
 
 
-size_t write_response_data(char *ptr, size_t size, size_t nmemb, void *userdata)
-{
+size_t write_response_data(char *ptr, size_t size, size_t nmemb, void *userdata) {
+
     std::stringstream* s = (std::stringstream*)userdata;
     size_t n = size * nmemb;
     s->write(ptr, n);
     return n;
 }
 
+int main(int argc, char* argv[]) {
 
-struct File {
-  const char *filename;
-  FILE *stream;
-};
- 
-static size_t my_fwrite(void *buffer, size_t size, size_t nmemb, void *stream)
-{
-
+	if (argc == 1) {
 	
-  struct File *out = (struct File *)stream;
+		std::cout << "no args" << std::endl;	
+		return 0;
+	} 
 
-  if(out && !out->stream) {
-    //open file for writing 
-    out->stream=fopen(out->filename, "wb");
+    CURL *curl = curl_easy_init();
 
-		//failure, can't open file to write
-    if(!out->stream) {
-      return -1; 
+    if (curl) {
+		//если запрос состоит из нескольких слов, их надо сшить через "+"
+		std::string terminal_query = "";
+		for (int i = 1; i < argc; ++i) {
+			terminal_query += std::string(argv[i]);
+			if (i < argc - 1) {
+				terminal_query += "+";
+			}
 		}
-  }
-  return fwrite(buffer, size, nmemb, out->stream);
-}
 
-int main(int argc, char* argv[])
-{
+		std::cout << terminal_query << std::endl;
 
-		if (argc == 1) {
-	
-			std::cout << "no args" << std::endl;	
-			return 0;
-		} 
+        se_engine se_request(terminal_query);
 
-		File my_xml_file = {"test.xml", /* name to store the file as if successful */ NULL	};
-
-    CURL *curl = NULL;
-    curl = curl_easy_init();
-    if (curl)
-    {
-
-				std::string terminal_query = "";
-				for (int i = 1; i < argc; ++i) {
-						terminal_query += std::string(argv[i]);
-						if (i < argc - 1) {
-							terminal_query += "+";
-						}
-				}
-
-				std::cout << terminal_query << std::endl;
-
-        se_engine se_test(terminal_query);
-
-				std::cout << "******************URL******************" << std::endl;
-				std::cout << se_test.get_url() << std::endl;
-				std::cout << "******************REQUEST BODY******************" << std::endl;
-				std::cout << se_test.get_request() << std::endl << std::endl;
-				std::cout << "******************RUNNING A REQUEST******************" << std::endl;
+		std::cout << "******************URL******************" << std::endl;
+		std::cout << se_request.get_url() << std::endl;
+		std::cout << "******************REQUEST BODY******************" << std::endl;
+		std::cout << se_request.get_request() << std::endl << std::endl;
+		std::cout << "******************RUNNING A REQUEST******************" << std::endl;
 
        //request a HTTP POST
         curl_easy_setopt(curl, CURLOPT_POST, 1);
 
         //подробная информация
         curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
-        curl_easy_setopt(curl, CURLOPT_URL, se_test.get_url().c_str());
+        curl_easy_setopt(curl, CURLOPT_URL, se_request.get_url().c_str());
 
-				//чтобы можно было работать через https
-				curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L); 
-				curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
+		//чтобы можно было работать через https
+		curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L); 
+		curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
 
-
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, se_test.get_request().c_str());
-        std::stringstream content_stream;
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, se_request.get_request().c_str());
 
 
-	      curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, &write_response_data);
-	      curl_easy_setopt(curl, CURLOPT_WRITEDATA, &content_stream);
-
-//        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, my_fwrite);
-//       curl_easy_setopt(curl, CURLOPT_WRITEDATA, &my_xml_file);
-
+	    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, &write_response_data);
+		
+		std::stringstream xml_content_stream;	
+	    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &xml_content_stream);
 
         CURLcode code = curl_easy_perform(curl);
 
@@ -99,14 +68,18 @@ int main(int argc, char* argv[])
 
 
 				
-				//проверка размера content_stream
-				content_stream.seekg(0, std::ios::end);
-				int size_of_content_stream = content_stream.tellg();
+		//проверка размера xml_content_stream
+		xml_content_stream.seekg(0, std::ios::end);
+		int size_of_xml_content_stream = xml_content_stream.tellg();
+		std::cout << "size_of_xml_content_stream " << size_of_xml_content_stream << " bytes" << std::endl << std::endl;
 
-				std::cout << "size_of_content_stream " << size_of_content_stream << " bytes" << std::endl << std::endl;
-
-        std::cout << "CONTENT STREAM" << std::endl << std::endl;
-        std::cout << content_stream.str() << std::endl;
+		//если хочется экспортировать stringstream в xml-файл		
+		
+		FILE * outff = fopen("outf.xml", "w");
+		fputs(xml_content_stream.str().c_str(), outff);
+		fclose(outff);
+		
+		xml_parse(xml_content_stream);
 
     }
 
