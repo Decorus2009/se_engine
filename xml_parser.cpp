@@ -4,11 +4,8 @@ using std::endl;
 
 /* track the current level in the xml tree */
 static int depth = 0;
-//static char *last_content;
-static std::string last_content;
-
 static int RES = -1;
-
+static std::string last_content;
 static bool found_docs_tag_found = false;
 
 /* first when start element is encountered */
@@ -27,7 +24,6 @@ void xml_parser::start_tag(void *data, const char *element, const char **attribu
 /* decrement the current level of the tree */
 void xml_parser::end_tag(void *data, const char *el) { 
 
-
 	if (found_docs_tag_found) {
 //CAN'T USE STOI!
 //		int res = stoi(last_content);
@@ -40,21 +36,10 @@ void xml_parser::end_tag(void *data, const char *el) {
 void xml_parser::handle_data(void *data, const char *content, int length) {
 
 	if (found_docs_tag_found) {
-		char *tmp = new char[length + 1];
-		strncpy(tmp, content, length);
-		tmp[length] = '\0';
-		data = (void *) tmp;
-		last_content = tmp;    
-		delete [] tmp;     
 
-		//found_docs_tag_found = false;
+		last_content = std::string(content);
+		data = (void *) last_content.c_str();
 	}
-//???
-/*
-	std::string tmp = content;
-	data = (void *)tmp.c_str();
-	last_content = tmp;
-*/
 }
 
 int xml_parser::xml_parse(std::stringstream &xml_content_stream) {
