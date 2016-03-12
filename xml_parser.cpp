@@ -17,7 +17,6 @@ void xml_parser::start_tag(void *data, const char *element, const char **attribu
 
 		found_docs_tag_found = true;
 	}
-
 	++depth;
 }
 
@@ -63,9 +62,9 @@ int xml_parser::xml_parse(std::stringstream &xml_content_stream) {
 
 	//cout << xml_content_stream.str();
 	//xml_content_stream.read(buff, buff_size);
-	buff[buff_size] = '\0';
 	fread(buff, sizeof(char), buff_size, xml_file);
 
+	buff[buff_size] = '\0';
 //	cout << "BUFFER: " << endl;
 //	for (int i = 0; i < buff_size; ++i) cout << buff[i];
 
