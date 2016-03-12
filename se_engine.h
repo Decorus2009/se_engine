@@ -4,12 +4,15 @@
 #include<string>
 #include<iostream>
 
+//  класс нужно использовать так
+// se_engine se; вся инициализация должна быть в конструкторе
+// se.do("vasya");
+// se.do("petya");
 struct se_engine {
-
 public:
-
+    //const &
     se_engine(std::string query);
-		~se_engine();
+	~se_engine();
 
     inline std::string get_url() const { return url_; }
     inline std::string get_request() const { return request_; }
@@ -23,7 +26,7 @@ private:
     std::string api_key_;
     std::string filter_;
     std::string l10n_;
-		std::string url_;
+	std::string url_;
     
 		//std::string showmecaptcha_;
     std::string xml_encode_type_;

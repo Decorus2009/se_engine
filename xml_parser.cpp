@@ -73,6 +73,8 @@ int xml_parser::xml_parse(std::stringstream &xml_content_stream) {
 	XML_SetCharacterDataHandler(parser, handle_data);
     
 	/* parse the xml */
+	//string s = xml_content.str();
+	//s.c_str(), s.length()
     if(XML_Parse(parser, buff, strlen(buff), XML_TRUE) == XML_STATUS_ERROR) {
 		cout << "Error: " << XML_ErrorString(XML_GetErrorCode(parser));
     }

@@ -34,6 +34,7 @@ void se_engine::build_query() {
     sortby_ = "rlv";
     maxpassages_ = "2";
     page_ = "0";
+    //зачем здесь второе по счету приведения типа к string? 
     groupby_ = (std::string)"attr=" + "\"" + "d" + "\"" + " mode=" + "\"" + (std::string)"deep" +
             "\"" + " groups-on-page=" + "\"" + "10" + "\"" + " docs-in-group=" + "\"" + "3" + "\"";
 

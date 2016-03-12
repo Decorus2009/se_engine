@@ -1,6 +1,7 @@
 #ifndef XML_PARSER_H
 #define XML_PARSER_H
 
+//перенесети ненужные хидеры в cpp
 #include <stdio.h>
 #include <expat.h>
 #include <string.h>
@@ -8,6 +9,7 @@
 #include <iostream>
 #include <sstream>
 
+//разделить методы на приватные и публичные
 struct xml_parser {
 public:
 	static void start_tag(void *data, const char *element, const char **attribute);
