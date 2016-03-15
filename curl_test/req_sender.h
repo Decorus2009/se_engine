@@ -39,7 +39,7 @@ private:
 
 	CURL *curl_;
 
-	size_t write_response_data(char *ptr, size_t size, size_t nmemb, void *userdata);
+	static size_t write_response_data(char *ptr, size_t size, size_t nmemb, void *userdata);
 
 public:
 

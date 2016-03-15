@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS= -c
+CFLAGS= -c -g
 
 all: exec
 
@@ -12,3 +12,5 @@ req_sender.o: req_sender.cpp req_sender.h
 exec: main.o req_sender.o 
 	$(CC) main.o req_sender.o -lcurl -o exec
 
+clean:
+	rm *.o exec
