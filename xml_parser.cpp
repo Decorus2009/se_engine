@@ -1,32 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+#include <cstdlib>
+#include <iostream>
 #include "xml_parser.h"
+
+using std::string;
 using std::cout;
 using std::endl;
 
 /* track the current level in the xml tree */
-static int depth = 0;
-static int RES = -1;
-static std::string last_content;
-static bool found_docs_tag_found = false;
+size_t depth = 0;
+long long found = -1;
+string last_content;
+bool found_docs_tag_found = false;
 
 /* first when start element is encountered */
 void xml_parser::start_tag(void *data, const char *element, const char **attribute) {
 
-	if (std::string(element) == "found-docs"
-		&& std::string(attribute[0]) == "priority"  
-	 	&& std::string(attribute[1]) == "all") {
+	if (string(element) == "found-docs"
+		&& string(attribute[0]) == "priority"  
+	 	&& string(attribute[1]) == "all") {
 
 		found_docs_tag_found = true;
 	}
-	++depth;
+	++depth; 
 }
 
 /* decrement the current level of the tree */
 void xml_parser::end_tag(void *data, const char *el) { 
 
 	if (found_docs_tag_found) {
-//CAN'T USE STOI!
-//		int res = stoi(last_content);
-		RES = atoi(last_content.c_str());
+
+		found = atoll(last_content.c_str());
 		found_docs_tag_found = false;
 	}
 	--depth;
@@ -36,55 +41,26 @@ void xml_parser::handle_data(void *data, const char *content, int length) {
 
 	if (found_docs_tag_found) {
 
-		last_content = std::string(content);
-		data = (void *) last_content.c_str();
+		last_content = string(content);
 	}
 }
 
-int xml_parser::xml_parse(std::stringstream &xml_content_stream) {
-
-	//может, имеет смысл использовать буфер небольшого размера, чтобы хватило дойти до found-docs, а дальше уже парсить не надо.
-
-	//размер xml_content_stream
-	xml_content_stream.seekg(0, std::ios::end);
-//	size_t size_of_xml_content_stream = xml_content_stream.tellg();
-//	std::cout << "size_of_xml_content_stream " << size_of_xml_content_stream << " bytes" << std::endl << std::endl;
-
-	size_t buff_size = 4096;
-	//char buff[buff_size];
-	char *buff = new char[buff_size];	
-	memset(buff, 0, buff_size);
-
-
-    FILE *xml_file = fopen("outf.xml", "r");
-    if(xml_file == NULL) { printf("Failed to open file\n"); return 1; }
-
-
-	//cout << xml_content_stream.str();
-	//xml_content_stream.read(buff, buff_size);
-	fread(buff, sizeof(char), buff_size, xml_file);
-
-	buff[buff_size] = '\0';
-//	cout << "BUFFER: " << endl;
-//	for (int i = 0; i < buff_size; ++i) cout << buff[i];
+long long xml_parser::parse(std::stringstream &xml_content_stream) {
 
     XML_Parser parser = XML_ParserCreate(NULL);
     XML_SetElementHandler(parser, start_tag, end_tag);
 	XML_SetCharacterDataHandler(parser, handle_data);
     
-	/* parse the xml */
-	//string s = xml_content.str();
-	//s.c_str(), s.length()
-    if(XML_Parse(parser, buff, strlen(buff), XML_TRUE) == XML_STATUS_ERROR) {
+
+	string buffer = xml_content_stream.str();
+
+    if (XML_Parse(parser, buffer.c_str(), buffer.length(), XML_TRUE) == XML_STATUS_ERROR) {
 		cout << "Error: " << XML_ErrorString(XML_GetErrorCode(parser));
     }
 
-    fclose(xml_file);
     XML_ParserFree(parser);
 
-	cout << endl << endl << "RESULT: " << RES << endl;
-	cout << endl << endl << "RESULT: " << atoi(last_content.c_str()) << endl;
+	cout << endl << endl << "foundULT: " << found << endl;
 
-	return 0;
-
+	return found;
 }

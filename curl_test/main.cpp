@@ -2,7 +2,6 @@
 #include <sstream>
 #include <curl/curl.h>
 #include "req_sender.h"
-#include "xml_parser.h"
 
 
 
