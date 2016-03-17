@@ -1,18 +1,15 @@
-#include <fstream>
-#include <sstream>
-#include <curl/curl.h>
-#include "req_sender.h"
-#include "xml_parser.h"
+#include "Yandex_requester.h"
+#include <iostream>
+using namespace std;
 
 
+int main() {
 
-int main(int argc, char* argv[]) {
+	Yandex_requester y;
+	cout << y.send_request("a") << endl;
+	cout << y.send_request("b") << endl;
+	cout << y.send_request("c") << endl;
 
-	req_sender rs;
 
-	rs.send_request("hello");
-
-
-	
-    return 0;
+	return 0;
 }

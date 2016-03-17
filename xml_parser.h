@@ -1,12 +1,14 @@
 #ifndef XML_PARSER_H
 #define XML_PARSER_H
 
+#include <string>
 #include <expat.h>
-#include <sstream>
 
 struct xml_parser {
 
 private:
+
+//	static XML_Parser parser_;
 
 	static void start_tag(void *data, const char *element, const char **attribute);
 	static void end_tag(void *data, const char *el);
@@ -17,7 +19,9 @@ private:
 
 public:
 
-	static long long parse(std::stringstream &xml_content_stream);
+	//приходится его объявить
+	xml_parser();
+	static long long parse(std::string const &xml);
 
 };
 #endif

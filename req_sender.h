@@ -2,10 +2,7 @@
 #define REQ_SENDER_H
 
 #include <string>
-#include <iostream>
 #include <curl/curl.h>
-#include <sstream>
-#include <string>
 
 using std::string;
 //  класс нужно использовать так
@@ -36,23 +33,20 @@ private:
 
 	string url_;
     string request_;
-
+ 
 	CURL *curl_;
 
-	size_t write_response_data(char *ptr, size_t size, size_t nmemb, void *userdata);
+	static size_t write_response_data(char *ptr, size_t size, size_t nmemb, void *userdata);
 
 public:
 
     req_sender();
 	~req_sender();
 
-    inline string get_url() const { return url_; }
-    inline string get_request() const { return request_; }
-
-	void send_request(string const &req_str);
+	string send_curl_request(string const &req_str);
 };
 
 
-#endif //req_sender_H
+#endif 
 
 

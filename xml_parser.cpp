@@ -1,18 +1,13 @@
-#include <stdio.h>
-#include <string.h>
-#include <cstdlib>
 #include <iostream>
 #include "xml_parser.h"
 
 using std::string;
-using std::cout;
-using std::endl;
 
-/* track the current level in the xml tree */
-size_t depth = 0;
-long long found = -1;
-string last_content;
+xml_parser::xml_parser() {}
+
+long long found_res_num = -1;
 bool found_docs_tag_found = false;
+string last_content;
 
 /* first when start element is encountered */
 void xml_parser::start_tag(void *data, const char *element, const char **attribute) {
@@ -23,18 +18,15 @@ void xml_parser::start_tag(void *data, const char *element, const char **attribu
 
 		found_docs_tag_found = true;
 	}
-	++depth; 
 }
 
-/* decrement the current level of the tree */
 void xml_parser::end_tag(void *data, const char *el) { 
-
+	
 	if (found_docs_tag_found) {
 
-		found = atoll(last_content.c_str());
+		found_res_num = atoll(last_content.c_str());
 		found_docs_tag_found = false;
 	}
-	--depth;
 }
 
 void xml_parser::handle_data(void *data, const char *content, int length) {
@@ -45,22 +37,20 @@ void xml_parser::handle_data(void *data, const char *content, int length) {
 	}
 }
 
-long long xml_parser::parse(std::stringstream &xml_content_stream) {
+long long xml_parser::parse(std::string const &xml) {
+	
+	XML_Parser parser_ = XML_ParserCreate(NULL);
 
-    XML_Parser parser = XML_ParserCreate(NULL);
-    XML_SetElementHandler(parser, start_tag, end_tag);
-	XML_SetCharacterDataHandler(parser, handle_data);
-    
+ 
+    XML_SetElementHandler(parser_, start_tag, end_tag);
+    XML_SetCharacterDataHandler(parser_, handle_data);
 
-	string buffer = xml_content_stream.str();
 
-    if (XML_Parse(parser, buffer.c_str(), buffer.length(), XML_TRUE) == XML_STATUS_ERROR) {
-		cout << "Error: " << XML_ErrorString(XML_GetErrorCode(parser));
+    if (XML_Parse(parser_, xml.c_str(), xml.length(), XML_TRUE) == XML_STATUS_ERROR) {
+		std::cout << "Error: " << XML_ErrorString(XML_GetErrorCode(parser_)) << std::endl;
     }
+	
+	XML_ParserFree(parser_);
 
-    XML_ParserFree(parser);
-
-	cout << endl << endl << "foundULT: " << found << endl;
-
-	return found;
+	return found_res_num;
 }
