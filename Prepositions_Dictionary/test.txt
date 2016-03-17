@@ -1,0 +1,21 @@
+#Single_words
+a
+an
+aboard
+within
+w/i
+without
+w/o
+worth
+#Two_words
+according to
+ahead of
+apart from
+as for
+as of
+as per
+as regards
+aside from
+astern of
+back to
+because of

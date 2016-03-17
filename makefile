@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS= -c -g #-Wall
+CFLAGS= -c -g -Wall
 
 all: exec
 
