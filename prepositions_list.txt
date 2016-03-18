@@ -1,4 +1,3 @@
-#SINGLE_WORDS
 a
 an
 aboard
@@ -144,7 +143,6 @@ w/i
 without
 w/o
 worth
-#TWO_WORDS
 according to
 ahead of
 apart from
@@ -180,12 +178,10 @@ subsequent to
 such as
 thanks to
 up to
-#THREE_WORDS
 as far as 
 as opposed to
 as soon as
 as well as
-#PREPOSITION_NOUN_PREPOSITION
 at the behest of
 by means of
 by virtue of
@@ -205,7 +201,6 @@ on top of
 with regard to
 with respect to
 with a view to
-#ARCHAIC_DIALECTICAL
 abaft
 abeam
 aboon
@@ -261,7 +256,6 @@ umb
 um
 unto
 uptill
-#POSTPOSITIONS
 ago
 apart
 aside
@@ -270,6 +264,5 @@ away
 hence
 notwithstanding
 on
-short
 through
 withal
