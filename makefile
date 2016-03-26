@@ -1,12 +1,12 @@
 CC = g++
 CFLAGS = -c -std=c++11 -Wall
-OBJECTS = main.o prepositions_dictionary.o yandex_requester.o request_sender.o xml_parser.o text_analyzer.o
+OBJECTS = bin/main.o bin/prepositions_dictionary.o bin/yandex_requester.o bin/request_sender.o bin/xml_parser.o bin/text_analyzer.o
 LIBS = -lcurl -lexpat
 
 vpath %.cpp %.hpp src
 vpath %.o bin
 
-all: exec
+all: pre-build exec
 
 bin/main.o: src/main.cpp src/yandex_requester.hpp src/prepositions_dictionary.hpp
 	$(CC) $(CFLAGS) $< -o $@
@@ -29,8 +29,8 @@ bin/xml_parser.o: src/xml_parser.cpp src/xml_parser.hpp
 exec: $(OBJECTS)
 	$(CC) $^ $(LIBS) -o $@
 
-bin:
+pre-build:
 	mkdir -p bin
 
 clean:
-	rm -rf ./bin exec
+	rm -rf ./bin *.o exec
