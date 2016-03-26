@@ -29,5 +29,8 @@ bin/xml_parser.o: src/xml_parser.cpp src/xml_parser.hpp
 exec: $(OBJECTS)
 	$(CC) $^ $(LIBS) -o $@
 
+bin:
+	mkdir -p bin
+
 clean:
-	rm -rf bin/*.o src/*.gch exec
+	rm -rf ./bin exec
