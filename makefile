@@ -1,25 +1,33 @@
 CC = g++
-CFLAGS = -c -Wall "-std=c++11"
+CFLAGS = -c -std=c++11 -Wall
+OBJECTS = main.o prepositions_dictionary.o yandex_requester.o request_sender.o xml_parser.o text_analyzer.o
+LIBS = -lcurl -lexpat
+
+vpath %.cpp %.hpp src
+vpath %.o bin
 
 all: exec
 
-main.o: main.cpp Yandex_requester.h Prepositions_Dictionary.h
-	$(CC) $(CFLAGS) main.cpp
+bin/main.o: src/main.cpp src/yandex_requester.hpp src/prepositions_dictionary.hpp
+	$(CC) $(CFLAGS) $< -o $@
 
-Prepositions_Dictionary.o : Prepositions_Dictionary.cpp Prepositions_Dictionary.h
-	$(CC) $(CFLAGS) Prepositions_Dictionary.cpp
+bin/text_analyzer.o: src/text_analyzer.cpp src/text_analyzer.hpp
+	$(CC) $(CFLAGS) $< -o $@
 
-Yandex_requester.o : Yandex_requester.cpp req_sender.h xml_parser.h
-	$(CC) $(CFLAGS) Yandex_requester.cpp
+bin/prepositions_dictionary.o: src/prepositions_dictionary.cpp src/prepositions_dictionary.hpp
+	$(CC) $(CFLAGS) $< -o $@
 
-req_sender.o: req_sender.cpp req_sender.h
-	$(CC) $(CFLAGS) req_sender.cpp
+bin/yandex_requester.o: src/yandex_requester.cpp src/request_sender.hpp src/xml_parser.hpp
+	$(CC) $(CFLAGS) $< -o $@
 
-xml_parser.o: xml_parser.cpp xml_parser.h
-	$(CC) $(CFLAGS) xml_parser.cpp
+bin/request_sender.o: src/request_sender.cpp src/request_sender.hpp
+	$(CC) $(CFLAGS) $< -o $@
 
-exec: main.o Prepositions_Dictionary.o Yandex_requester.o req_sender.o xml_parser.o 
-	$(CC) main.o Prepositions_Dictionary.o Yandex_requester.o req_sender.o xml_parser.o -lcurl -lexpat -o exec
-	
+bin/xml_parser.o: src/xml_parser.cpp src/xml_parser.hpp
+	$(CC) $(CFLAGS) $< -o $@
+
+exec: $(OBJECTS)
+	$(CC) $^ $(LIBS) -o $@
+
 clean:
-	rm -rf *.o exec
+	rm -rf bin/*.o src/*.gch exec

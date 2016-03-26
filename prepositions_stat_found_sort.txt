@@ -1,0 +1,260 @@
+gainward 100
+foreanent 101
+uptill 171
+foregainst 231
+anenst 232
+ablow 232
+sithence 240
+thruout 276
+nearhand 283
+abune 293
+overthwart 299
+emforth 302
+afront 335
+behither 341
+inmiddes 350
+forenenst 360
+alongst 397
+aboon 439
+tofore 452
+benorth 482
+anear 529
+forby 605
+maugre 667
+umbe 732
+atween 782
+outen 850
+'mongst 901
+ahind 1013
+mauger 1098
+abeam 1106
+quoad 1187
+furth 1278
+alow 1307
+outwith 1555
+fromwards 1808
+fromward 2016
+atwix 2249
+aslant 2258
+'twixt 2395
+twixt 2398
+abaft 2467
+anigh 3034
+neath 3209
+'neath 3210
+anent 3500
+gainst 3650
+'gainst 3656
+bove 3716
+ayond 3975
+astride 4113
+abun 4883
+umb 5179
+withal 5431
+dehors 5529
+foregain 5530
+imell 5551
+afore 5618
+bewest 6110
+'mong 6133
+mong 6159
+betwixt 6318
+apud 6924
+apropos 7213
+athwart 7593
+abreast 7596
+sauf 7685
+aloof 8365
+mang 9421
+inmid 13477
+anighst 14319
+atop 15898
+nigh 16244
+amidst 16756
+ajax 18403
+thru 20486
+aboard 20672
+pon 21029
+'pon 21145
+upside 21585
+circa 25128
+'bout 25483
+bout 25596
+amid 26098
+midst 27906
+o'er 27929
+notwithstanding 28227
+chez 28752
+qua 32261
+ere 32589
+underneath 32813
+minus 34192
+unto 35471
+amongst 37838
+w/o 39955
+alongside 40802
+beneath 42320
+vis-à-vis 42765
+sans 46748
+w/i 47733
+adjacent 48131
+spite 48681
+pace 50817
+beside 54746
+at the behest of 56582
+vice 56721
+astern of 57226
+on behalf of 59210
+um 60190
+aside 60283
+in spite of 62148
+onto 63460
+unlike 63596
+mid 64323
+forth 64452
+abroad 64488
+in accordance with 64655
+despite 68332
+in lieu of 69179
+besides 69383
+til 69852
+till 71022
+apart 72531
+absent 72677
+throughout 73978
+'til 75281
+hence 82802
+toward 87935
+regardless of 88154
+worth 93183
+pursuant to 93813
+for the sake of 94325
+gain 94642
+ben 97013
+froward 110780
+owing to 111670
+aside from 116900
+bar 117559
+towards 120176
+beyond 126337
+except 128191
+subsequent to 129448
+inside 129569
+via 138180
+'round 149135
+round 149262
+by virtue of 164047
+outside 172659
+ahead of 179980
+behind 182631
+per 192020
+apart from 197806
+upon 198387
+nearer 201657
+as opposed to 201676
+cross 204327
+opposite 207080
+nearest 207618
+along 212323
+near 213865
+pre 225627
+across 228772
+with respect to 229670
+ago 235637
+among 236443
+as regards 250204
+with regard to 257048
+until 257262
+prior to 262586
+save 269652
+ca. 274383
+away 279165
+as soon as 280955
+in front of 287144
+vs. 288383
+versus 288947
+except for 294122
+against 301512
+within 312068
+as per 329770
+opposite to 336619
+inside of 337949
+outside of 339077
+during 340275
+again 345095
+due to 349449
+opposite of 351074
+instead of 358178
+rather than 364119
+pro 372075
+above 377168
+near to 378844
+around 379072
+below 394823
+according to 399358
+w/ 411821
+since 416532
+as far as 439630
+short 463831
+far from 479975
+without 500167
+'long 506097
+down 510349
+under 519173
+on account of 538336
+through 540189
+re 540877
+before 551581
+next 552433
+in point of 563838
+between 564805
+in case of 566091
+over 566600
+because of 576914
+in addition to 585474
+post 585814
+such as 597167
+but 599390
+thanks to 601326
+close to 603574
+on top of 613732
+ontop 614727
+less 628540
+come 630097
+past 645698
+after 651469
+left of 653182
+in order to 654993
+next to 655239
+than 687209
+back to 687687
+v. 689414
+c. 724632
+into 746163
+with a view to 769266
+from 819587
+up 842675
+out from 844325
+by 856902
+out 860410
+about 861723
+at 873999
+by means of 876894
+as 882871
+in place of 897389
+right of 911964
+as for 924516
+as of 936380
+out of 940931
+up to 964637
+like 982196
+or 993085
+with 997093
+as well as 1001057
+for 1038467
+on 1060610
+in 1120846
+o' 1206129
+of 1206802
+off 1206802
+to 1245486
