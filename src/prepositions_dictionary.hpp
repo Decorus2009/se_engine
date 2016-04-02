@@ -46,17 +46,15 @@
 struct prepositions_dictionary {
 
 private:
-	std::map <std::string, bool> dictionary_;
-
-
+    std::map <std::string, bool> dictionary_;
 
 public:
-	prepositions_dictionary();
-	prepositions_dictionary(prepositions_dictionary const &) = delete;
-	prepositions_dictionary &operator=(prepositions_dictionary const &) = delete;
+    prepositions_dictionary();
+    prepositions_dictionary(prepositions_dictionary const &) = delete;
+    prepositions_dictionary &operator=(prepositions_dictionary const &) = delete;
 
-	void print();
-	std::map <std::string, bool> const &get_dictionary();
+    void print();
+    bool find(std::string const &word);
 };
 
 #endif

@@ -5,6 +5,7 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
+#include <iomanip>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ using namespace std;
 int main(int argc, char **argv) {
 
 	if (argc == 1) {
-		cout << "No arguments";
+		cout << "No arguments" << endl;
 		return 0;
 	}
 

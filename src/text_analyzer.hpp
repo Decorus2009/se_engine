@@ -1,9 +1,9 @@
 #ifndef TEXT_ANALYZER_HPP
 #define TEXT_ANALYZER_HPP
 
-#include "prepositions_dictionary.hpp"
 #include <sstream>
 #include <fstream>
+#include "prepositions_dictionary.hpp"
 
 struct text_analyzer {
 
@@ -11,7 +11,9 @@ private:
     std::stringstream text_;
     prepositions_dictionary dictionary_;
 
-    std::pair<bool, bool> check_word_bounds(std::string &word);
+    // bool is_begin(std::string const &word);
+    // bool is_end(std::string const &word);
+    //void remove_side_chars(std::string &word);
 
 public:
     text_analyzer(std::ifstream &text_file);

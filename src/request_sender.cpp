@@ -52,8 +52,6 @@ string request_sender::send_curl_request(string const & req_str) {
 
 
 
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	//избавиться от лишних + в формировании req_header_
     req_header_ = (string)"<?xml version=" + "\"" + "1.0" + "\"" +
 				  " encoding=" + "\"" + xml_encode_type_ + "\"" + "?>";
 
