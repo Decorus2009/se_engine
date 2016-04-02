@@ -217,7 +217,6 @@ void text_analyzer::analyze() {
                             " at line: " << setw(5) << line_counter << ",    word: " << setw(5) << sentence[i].second << endl;
 
 
-
                             // формирование запроса
                             auto left_right_requests = build_left_right_requests(sentence, i, it->second);
 

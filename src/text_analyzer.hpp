@@ -11,10 +11,6 @@ private:
     std::stringstream text_;
     prepositions_dictionary dictionary_;
 
-    // bool is_begin(std::string const &word);
-    // bool is_end(std::string const &word);
-    //void remove_side_chars(std::string &word);
-
 public:
     text_analyzer(std::ifstream &text_file);
     text_analyzer(text_analyzer const &) = delete;
