@@ -71,9 +71,16 @@ map<int, string> build_requests(vector<pair<string, size_t>> const& sentence,
 
     // например, хорошо работает "glaring at him" - 19000 vs. "glaring with him" - 4 ответа
 
+
+
+
     // замечание: "his idea of hiding here" - 25 ответов.
     // "his idea by hiding here" - 10 000 000 ответов. Скорее всего фразу именно в кавычках он не нашел нигде,
-    // поэтому поисковой запрос преобразовался в обычный без кавычек
+    // поэтому поисковый запрос преобразовался в обычный без кавычек.
+    // Как тогда быть, ведь такое значение выше любого порога???????????????????????????????????????????????????????
+
+
+
 
 
     // результат записывается в map, ключ - тип запроса, значение - запрос
@@ -255,10 +262,18 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
     // строится ровно один запрос: типа 3, если нет, то -2 или 2, если нет, то -1 или 1
 
     string req;
+    int req_type;
+    map<int, size_t> thresholds;
+    thresholds.insert(std::make_pair(3, 100));
+    thresholds.insert(std::make_pair(-2, 100));
+    thresholds.insert(std::make_pair(2, 100));
+    thresholds.insert(std::make_pair(-1, 1000));
+    thresholds.insert(std::make_pair(1, 1000));
 
     if(requests.find(3) != requests.end()) {
 
         req = requests[3];
+        req_type = 3;
         requests_results_for_log << "one left && one right words request: " << std::setw(27);
     }
     // иначе - запросы с двумя словами - только слева, либо только справа
@@ -269,12 +284,14 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
     else if (requests.find(-2) != requests.end()) {
 
         req = requests[-2];
+        req_type = -2;
         requests_results_for_log << "two left words request: " << std::setw(40);
     }
     // если есть правый запрос на два слова
     else if (requests.find(2) != requests.end()) {
 
         req = requests[2];
+        req_type = 2;
         requests_results_for_log << "two right words request: " << std::setw(39);
     }
 
@@ -284,6 +301,7 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
     else if (requests.find(-1) != requests.end()) {
 
         req = requests[-1];
+        req_type = -1;
         requests_results_for_log << "one left word request: " << std::setw(41);
 
     }
@@ -291,6 +309,7 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
     else if (requests.find(1) != requests.end()) {
 
         req = requests[1];
+        req_type = 1;
         requests_results_for_log << "one right word request: " << std::setw(40);
     }
 
@@ -305,6 +324,18 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
     requests_results_for_log  << req << ": " << std::setw(12) << req_res
                               << "\tat line: " << std::setw(5) << line_counter
                               << "    word: " << std::setw(5) << word_counter << "\n";
+
+
+
+    // результат ниже порога
+    if (req_res <= thresholds[req_type]) {
+          requests_results_for_log << "***WARNING*** \nPossible mistake: " << "line: "
+                                   << std::setw(3) << line_counter << ", word: "
+                                   << std::setw(3) << word_counter
+                                   << ": " << req << "\n\n";
+    }
+
+
 
     // запрос с двумя словами слева и справа
     // TODO or not?
