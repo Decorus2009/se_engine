@@ -4,10 +4,6 @@
 #include <string>
 #include <curl/curl.h>
 
-//  класс нужно использовать так
-// request_sender se; вся инициализация должна быть в конструкторе
-// se.do("vasya");
-// se.do("petya");
 struct request_sender {
 
 private:
@@ -43,6 +39,5 @@ public:
 
     std::string send_curl_request(std::string const &req_str);
 };
-
 
 #endif

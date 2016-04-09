@@ -45,11 +45,9 @@ string request_sender::send_curl_request(string const & req_str) {
 		   "&l10n=" + l10n_ + "&filter=" + filter_;
 
 
-
     //надо сделать поддержку percent-encoding
 
     xml_encode_type_ = "UTF-8";
-
 
 
     req_header_ = (string)"<?xml version=" + "\"" + "1.0" + "\"" +

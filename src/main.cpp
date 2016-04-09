@@ -7,54 +7,34 @@
 #include <algorithm>
 #include <iomanip>
 
-using namespace std;
+#include "logger.hpp"
 
 
 int main(int argc, char **argv) {
 
 	if (argc == 1) {
-		cout << "No arguments" << endl;
+		std::cout << "No arguments" << std::endl;
 		return 0;
 	}
 
-	ifstream text_file(argv[1], ios_base::binary);
-	if (text_file.fail()) {
-        cerr << "Error: could not open " << '"' << text_file << '"' << " file" << endl;
-        return 1;
+	std::ifstream text_file;
+    try {
+        text_file.open(argv[1], std::ios_base::binary);
+        if (!text_file) {
+            throw std::ios::failure("Error: could not open text file") ;
+        }
+    }
+    catch(std::exception const& e) {
+        std::cerr << e.what() << std::endl;
+		return 1;
     }
 
+	logger log;
 	text_analyzer analyzer(text_file);
-	analyzer.analyze();
+	analyzer.analyze(log);
 
-	//
-	// ifstream f("test_text_HPOP");
-	// string s;
-	// string text;
-	// while (getline(f, s)) {
-	// 	text += s;
-	// }
-	// cout << text << endl;
-	//
-	// istringstream iss(text);
-    // string word;
-    // while(iss >> word) {
-	// 	//cout << word << endl;
-    // }
+	std::cout << std::endl << "LOG: " << std::endl << std::endl;
+	log.print_log();
 
-
-// 	ifstream ifile("prepositions_stat_found_sort.txt", ios_base::binary);
-// 	stringstream iss;
-// 	iss << ifile.rdbuf();
-// 	//cout << iss.str();
-//
-// 	string word;
-//     while(iss >> word) {
-// //		cout << word << ' ';
-//     }
-//
-// 	string st = "test_text_HPOP";
-// 	text_analyzer ta(st);
-//
-//
 	return 0;
 }

@@ -1,6 +1,7 @@
 CC = g++
 CFLAGS = -c -std=c++11 #-Wall
-OBJECTS = bin/main.o bin/prepositions_dictionary.o bin/yandex_requester.o bin/request_sender.o bin/xml_parser.o bin/text_analyzer.o
+OBJECTS = bin/main.o bin/prepositions_dictionary.o bin/yandex_requester.o \
+		  bin/request_sender.o bin/xml_parser.o bin/text_analyzer.o #bin/logger.o
 LIBS = -lcurl -lexpat
 
 vpath %.cpp %.hpp src
@@ -24,6 +25,9 @@ bin/request_sender.o: src/request_sender.cpp src/request_sender.hpp
 	$(CC) $(CFLAGS) $< -o $@
 
 bin/xml_parser.o: src/xml_parser.cpp src/xml_parser.hpp
+	$(CC) $(CFLAGS) $< -o $@
+
+bin/logger.o: src/logger.hpp
 	$(CC) $(CFLAGS) $< -o $@
 
 exe: $(OBJECTS)

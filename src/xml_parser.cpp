@@ -47,7 +47,7 @@ long long xml_parser::parse(string const &xml) {
 
 
     if (XML_Parse(parser_, xml.c_str(), xml.length(), XML_TRUE) == XML_STATUS_ERROR) {
-		std::cout << "Error: " << XML_ErrorString(XML_GetErrorCode(parser_)) << std::endl;
+		std::cerr << "Error: " << XML_ErrorString(XML_GetErrorCode(parser_)) << std::endl;
     }
 
 	XML_ParserFree(parser_);

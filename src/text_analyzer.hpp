@@ -4,6 +4,7 @@
 #include <sstream>
 #include <fstream>
 #include "prepositions_dictionary.hpp"
+#include "logger.hpp"
 
 struct text_analyzer {
 
@@ -16,7 +17,7 @@ public:
     text_analyzer(text_analyzer const &) = delete;
     text_analyzer &operator=(text_analyzer const &) = delete;
 
-    void analyze();
+    void analyze(logger &log);
 };
 
 

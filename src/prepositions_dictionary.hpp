@@ -13,7 +13,7 @@
 * Preposition + (article) + noun + preposition ()
 * Archaic
 * Postposition (1 слово, некоторые слова пересекаются с предлогами, 1 слово - устар)
-*z
+*
 * Метаинформация:
 * (тип 0/1 (устар/норм)) (0 - archaic poetic rare) =>
 * map <string, bool>
@@ -38,9 +38,6 @@
 * again, gain - устар от against. Для них порог должен быть маленький, но поиск будет работать некорректно, найдет много.
 *
 *
-*
-*
-*
 */
 
 struct prepositions_dictionary {
@@ -49,11 +46,12 @@ private:
     std::map <std::string, bool> dictionary_;
 
 public:
-    prepositions_dictionary();
+    prepositions_dictionary(); // throws
     prepositions_dictionary(prepositions_dictionary const &) = delete;
     prepositions_dictionary &operator=(prepositions_dictionary const &) = delete;
 
-    void print();
+    // never used
+    // void print();
     bool find(std::string const &word);
 };
 

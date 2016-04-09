@@ -17,8 +17,7 @@ public:
 	yandex_requester(yandex_requester const &) = delete;
 	yandex_requester &operator=(yandex_requester const &) = delete;
 
-	long long send_request(std::string const &req_str);
+	unsigned long long send_request(std::string const &req_str);
 };
-
 
 #endif
