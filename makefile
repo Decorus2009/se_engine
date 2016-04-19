@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -c -std=c++11 #-Wall
 OBJECTS = bin/main.o bin/prepositions_dictionary.o bin/yandex_requester.o \
-		  bin/request_sender.o bin/xml_parser.o bin/text_analyzer.o #bin/logger.o
+		  bin/text_analyzer.o bin/logger.o
 LIBS = -lcurl -lexpat
 
 vpath %.cpp %.hpp src
@@ -9,25 +9,19 @@ vpath %.o bin
 
 all: pre-build exe
 
-bin/main.o: src/main.cpp src/yandex_requester.hpp src/prepositions_dictionary.hpp
+bin/main.o: src/main.cpp src/yandex_requester.hpp src/prepositions_dictionary.hpp src/logger.hpp
 	$(CC) $(CFLAGS) $< -o $@
 
-bin/text_analyzer.o: src/text_analyzer.cpp src/text_analyzer.hpp
+bin/text_analyzer.o: src/text_analyzer.cpp src/text_analyzer.hpp src/logger.hpp
 	$(CC) $(CFLAGS) $< -o $@
 
-bin/prepositions_dictionary.o: src/prepositions_dictionary.cpp src/prepositions_dictionary.hpp
+bin/prepositions_dictionary.o: src/prepositions_dictionary.cpp
 	$(CC) $(CFLAGS) $< -o $@
 
-bin/yandex_requester.o: src/yandex_requester.cpp src/request_sender.hpp src/xml_parser.hpp
+bin/yandex_requester.o: src/yandex_requester.cpp
 	$(CC) $(CFLAGS) $< -o $@
 
-bin/request_sender.o: src/request_sender.cpp src/request_sender.hpp
-	$(CC) $(CFLAGS) $< -o $@
-
-bin/xml_parser.o: src/xml_parser.cpp src/xml_parser.hpp
-	$(CC) $(CFLAGS) $< -o $@
-
-bin/logger.o: src/logger.hpp
+bin/logger.o: src/logger.cpp
 	$(CC) $(CFLAGS) $< -o $@
 
 exe: $(OBJECTS)
