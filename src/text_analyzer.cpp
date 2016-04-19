@@ -1,12 +1,12 @@
 #include "text_analyzer.hpp"
 #include "yandex_requester.hpp"
-#include "logger.hpp"
 #include <fstream>
 #include <iostream>
 #include <iomanip>
 #include <vector>
 #include <algorithm>
 #include <ctype.h>
+
 
 using std::map;
 using std::pair;
@@ -60,10 +60,6 @@ void remove_side_chars(string& word) {
 // можно ради оптимизации попробовать возвращать ссылки
 map<int, string> build_requests(vector<pair<string, size_t>> const& sentence,
                                           size_t begin_ind, size_t len) {
-
-    // возможно стоит формировать запросы по 2 слова справа и слева
-    // тогда опять же надо рассмотреть случай, если вторые слова окажутся артиклями.
-    // А, может, и не надо
 
     // также "fly by the road" - полноценный запрос даст около 10 ответов,
     // тогда как "fly by" и "by the road" вернут много результатов
@@ -250,9 +246,9 @@ map<int, string> build_requests(vector<pair<string, size_t>> const& sentence,
 
 void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
                            size_t begin_ind, size_t len,
-                           logger &log, yandex_requester &requester,
+                           yandex_requester &requester,
                            size_t line_counter, size_t word_counter,
-                           stringstream &requests_results_for_log) {
+                           stringstream &results_debug_log, stringstream &release_log) {
 
     // формирование запросов
     auto requests = build_requests(sentence, begin_ind, len);
@@ -262,7 +258,7 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
     // строится ровно один запрос: типа 3, если нет, то -2 или 2, если нет, то -1 или 1
 
     string req;
-    int req_type;
+    int req_type = 0;
     map<int, size_t> thresholds;
     thresholds.insert(std::make_pair(3, 100));
     thresholds.insert(std::make_pair(-2, 100));
@@ -274,7 +270,7 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
 
         req = requests[3];
         req_type = 3;
-        requests_results_for_log << "one left && one right words request: " << std::setw(27);
+        results_debug_log << " 3" << std::setw(35);
     }
     // иначе - запросы с двумя словами - только слева, либо только справа
     // (одновременно запросы с двумя словами и слева, и справа не найти,
@@ -285,14 +281,14 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
 
         req = requests[-2];
         req_type = -2;
-        requests_results_for_log << "two left words request: " << std::setw(40);
+        results_debug_log << "-2" << std::setw(35);
     }
     // если есть правый запрос на два слова
     else if (requests.find(2) != requests.end()) {
 
         req = requests[2];
         req_type = 2;
-        requests_results_for_log << "two right words request: " << std::setw(39);
+        results_debug_log << " 2" << std::setw(35);
     }
 
     // иначе рассматриваем возможные запросы - только с одним словом слева,
@@ -302,7 +298,7 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
 
         req = requests[-1];
         req_type = -1;
-        requests_results_for_log << "one left word request: " << std::setw(41);
+        results_debug_log << "-1" << std::setw(35);
 
     }
     // если есть правый запрос на 1 слово
@@ -310,32 +306,33 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
 
         req = requests[1];
         req_type = 1;
-        requests_results_for_log << "one right word request: " << std::setw(40);
+        results_debug_log << " 1" << std::setw(35);
     }
 
-    unsigned long long req_res = requester.send_request(req);
+    long long req_res = requester.send_request(req);
 
     // отрезаем "quot;"
-    // надо только для необязательного вывода
+    // надо только для вывода в дебаге
     int quot_size = 6;
     req.erase(0, quot_size);
     req.erase(req.size() - quot_size, quot_size);
 
-    requests_results_for_log  << req << ": " << std::setw(12) << req_res
-                              << "\tat line: " << std::setw(5) << line_counter
-                              << "    word: " << std::setw(5) << word_counter << "\n";
-
-
+    results_debug_log  << req << ": " << std::setw(12) << req_res
+                              << "\tat line: " << std::setw(3) << line_counter
+                              << "    word: " << std::setw(2) << word_counter << std::endl;
 
     // результат ниже порога
+    // записываем его в дебаг и в релиз выводы
     if (req_res <= thresholds[req_type]) {
-          requests_results_for_log << "***WARNING*** \nPossible mistake: " << "line: "
-                                   << std::setw(3) << line_counter << ", word: "
-                                   << std::setw(3) << word_counter
-                                   << ": " << req << "\n\n";
+        stringstream warning_str;
+        warning_str << "Possible mistake: " << "line: "
+                          << std::setw(3) << line_counter << ", word: "
+                          << std::setw(3) << word_counter << ": "
+                          << req << std::endl;
+
+        results_debug_log << warning_str.str();
+        release_log << warning_str.str();
     }
-
-
 
     // запрос с двумя словами слева и справа
     // TODO or not?
@@ -346,12 +343,15 @@ void text_analyzer::analyze(logger &log) {
     // создаем его здесь, а не где-то в цикле, чтобы один раз инициализировать curl и пользоваться
     yandex_requester requester;
 
-    std::cout << text_.str() << std::endl;
-
     // для последующей записи в лог. Накапливаем результаты в них, чтобы потом
     // записать в лог все Found, а потом все результаты запросов. Чтобы не вперемешку было, а последовательно
-    stringstream requests_results_for_log;
-    stringstream found_results_for_log;
+    stringstream release_log;
+
+    stringstream results_debug_log;
+    stringstream found_debug_log;
+
+    found_debug_log << text_.str() << std::endl;
+
 
     // читаем целиком строку из стрима, ведем учет количества строк
     string line;
@@ -443,19 +443,16 @@ void text_analyzer::analyze(logger &log) {
 
 
 
-                            // пишем в лог cсписок найденных предлогов
-                            found_results_for_log << "Found" << std::setw(15) << it->first << "   "
-                                << " at line: " << std::setw(5) << line_counter
-                                << "    word: " << std::setw(5) << sentence[i].second << "\n";
-                            // // log << "Found" << std::setw(15) << it->first << "   "
-                            //     << " at line: " << std::setw(5) << line_counter
-                            //     << ",    word: " << std::setw(5) << sentence[i].second << "\n";
+                            // пишем в лог дебага список найденных предлогов
+                            found_debug_log << "Found" << std::setw(15) << it->first << "   "
+                            << " at line: " << std::setw(5) << line_counter
+                            << "    word: " << std::setw(5) << sentence[i].second << std::endl;
 
                             int len = it->second;
 
-                            send_and_log_requests(sentence, i, len, log, requester,
+                            send_and_log_requests(sentence, i, len, requester,
                                                   line_counter, sentence[i].second,
-                                                  requests_results_for_log);
+                                                  results_debug_log, release_log);
 
                             //смещаемся в смысловой фразе на количество слов предлога,
                             // as far as - на три слова вправо и продолжаем искать после них
@@ -470,6 +467,18 @@ void text_analyzer::analyze(logger &log) {
             }
         }
     }
-    log << found_results_for_log.str() << "\n"
-        << requests_results_for_log.str() << "\n";
+    found_debug_log << std::endl;
+    results_debug_log << std::endl;
+    release_log << std::endl;
+
+
+
+
+    // а почему тут не работает шаблонная версия?
+
+
+
+    log.write_log(found_debug_log.str());
+    log.write_log(results_debug_log.str());
+    log.write_log(release_log.str(), "RELEASE");
 }

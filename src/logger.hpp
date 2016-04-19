@@ -2,23 +2,27 @@
 #define LOGGER_HPP
 
 #include <sstream>
-#include <iostream>
+#include <string>
+
 struct logger {
 
 public:
-    template <typename T>
-    logger& operator<<(T const& value) {
-        log_storage_ << value;
-        return *this;
-    }
+    logger(std::string const &mode);
 
-    void print_log() {
-        std::cout << log_storage_.str() << std::endl;
-    }
+//    template<class T>
+//    void write_log(T const& val, std::string mode = "DEBUG");
+
+    void write_log(std::string info, std::string mode = "DEBUG");
+    void print_log();
+
+    logger(logger const &) = delete;
+    logger &operator=(logger const &) = delete;
+
 private:
-    std::stringstream log_storage_;
+    std::stringstream storage_debug_;
+    std::stringstream storage_release_;
+    std::string severity_;
 };
-
 
 
 #endif //LOGGER_HPP

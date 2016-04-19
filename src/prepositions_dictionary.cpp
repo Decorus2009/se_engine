@@ -1,14 +1,12 @@
-#include "prepositions_dictionary.hpp"
 #include <fstream>
 #include <iostream>
-
-using std::string;
+#include "prepositions_dictionary.hpp"
 
 prepositions_dictionary::prepositions_dictionary() {
 
     std::ifstream prep_file;
     try {
-        prep_file.open("prepositions_list.txt");
+        prep_file.open("/home/decorus/Dropbox/CSC/Practice/I/se_engine/prepositions_list.txt");
         if (!prep_file) {
             throw std::ios::failure("Error: could not open dictionary file") ;
         }
@@ -17,7 +15,7 @@ prepositions_dictionary::prepositions_dictionary() {
         std::cerr << e.what() << std::endl;
     }
 
-    string line;
+    std::string line;
 
     while (getline(prep_file, line)) {
         // метаинформация
@@ -31,19 +29,7 @@ prepositions_dictionary::prepositions_dictionary() {
     }
 }
 
-bool prepositions_dictionary::find(string const &word) {
-
+bool prepositions_dictionary::find(std::string const &word) {
     return dictionary_.find(word) != dictionary_.end();
 }
 
-// never used
-/*
-void prepositions_dictionary::print() {
-
-    std::cout << "Dictionary:" << std::endl;
-    for (auto it : dictionary_) {
-
-        std::cout << it.first << ' ' << it.second << std::endl;
-    }
-}
-*/

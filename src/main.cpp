@@ -1,25 +1,37 @@
 #include "yandex_requester.hpp"
 #include "prepositions_dictionary.hpp"
 #include "text_analyzer.hpp"
+#include "logger.hpp"
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <algorithm>
 #include <iomanip>
 
-#include "logger.hpp"
-
+using namespace std;
 
 int main(int argc, char **argv) {
 
-	if (argc == 1) {
-		std::cout << "No arguments" << std::endl;
-		return 0;
-	}
+	if (argc != 3) {
+        std::cerr << "Usage: [mode] [file]" << std::endl;
+        return 1;
+    }
 
+    logger log(argv[1]);
+    if (string(argv[1]) == "DEBUG") {
+
+
+    }
+    else if (string(argv[1]) == "RELEASE") {
+
+    }
+    else {
+        std::cerr << "Wrong mode" << std::endl;
+        return 1;
+    }
 	std::ifstream text_file;
     try {
-        text_file.open(argv[1], std::ios_base::binary);
+        text_file.open(argv[2], std::ios_base::binary);
         if (!text_file) {
             throw std::ios::failure("Error: could not open text file") ;
         }
@@ -29,11 +41,24 @@ int main(int argc, char **argv) {
 		return 1;
     }
 
-	logger log;
+
+
+
+
+
+	// exception бросать везде, где используется файл и не только
+	// см. пример на сplusplus ifstream.exceptions()
+
+
+
+
+
+
+
 	text_analyzer analyzer(text_file);
 	analyzer.analyze(log);
 
-	std::cout << std::endl << "LOG: " << std::endl << std::endl;
+	std::cout << "LOG: " << std::endl << std::endl;
 	log.print_log();
 
 	return 0;
