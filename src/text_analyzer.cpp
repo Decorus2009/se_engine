@@ -248,7 +248,8 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
                            size_t begin_ind, size_t len,
                            yandex_requester &requester,
                            size_t line_counter, size_t word_counter,
-                           stringstream &results_debug_log, stringstream &release_log) {
+                           stringstream &results_info,
+                           string const &log_mode) {
 
     // формирование запросов
     auto requests = build_requests(sentence, begin_ind, len);
@@ -270,7 +271,10 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
 
         req = requests[3];
         req_type = 3;
-        results_debug_log << " 3" << std::setw(35);
+
+        if (log_mode == "DEBUG") {
+            results_info << " 3" << std::setw(35);
+        }
     }
     // иначе - запросы с двумя словами - только слева, либо только справа
     // (одновременно запросы с двумя словами и слева, и справа не найти,
@@ -281,16 +285,21 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
 
         req = requests[-2];
         req_type = -2;
-        results_debug_log << "-2" << std::setw(35);
+
+        if (log_mode == "DEBUG") {
+            results_info << "-2" << std::setw(35);
+        }
     }
     // если есть правый запрос на два слова
     else if (requests.find(2) != requests.end()) {
 
         req = requests[2];
         req_type = 2;
-        results_debug_log << " 2" << std::setw(35);
-    }
 
+        if (log_mode == "DEBUG") {
+            results_info << " 2" << std::setw(35);
+        }
+    }
     // иначе рассматриваем возможные запросы - только с одним словом слева,
     // либо только с одним словом справа.
     // если есть левый запрос на 1 слово
@@ -298,15 +307,20 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
 
         req = requests[-1];
         req_type = -1;
-        results_debug_log << "-1" << std::setw(35);
 
+        if (log_mode == "DEBUG") {
+            results_info << "-1" << std::setw(35);
+        }
     }
     // если есть правый запрос на 1 слово
     else if (requests.find(1) != requests.end()) {
 
         req = requests[1];
         req_type = 1;
-        results_debug_log << " 1" << std::setw(35);
+
+        if (log_mode == "DEBUG") {
+            results_info << " 1" << std::setw(35);
+        }
     }
 
     long long req_res = requester.send_request(req);
@@ -317,23 +331,20 @@ void send_and_log_requests(vector<pair<string, size_t> > const& sentence,
     req.erase(0, quot_size);
     req.erase(req.size() - quot_size, quot_size);
 
-    results_debug_log  << req << ": " << std::setw(12) << req_res
-                              << "\tat line: " << std::setw(3) << line_counter
-                              << "    word: " << std::setw(2) << word_counter << std::endl;
+    if (log_mode == "DEBUG") {
+        results_info  << req << ": " << std::setw(12) << req_res
+        << "\tat line: " << std::setw(3) << line_counter
+        << "    word: " << std::setw(2) << word_counter << std::endl;
+    }
 
     // результат ниже порога
     // записываем его в дебаг и в релиз выводы
     if (req_res <= thresholds[req_type]) {
-        stringstream warning_str;
-        warning_str << "Possible mistake: " << "line: "
-                          << std::setw(3) << line_counter << ", word: "
-                          << std::setw(3) << word_counter << ": "
-                          << req << std::endl;
 
-        results_debug_log << warning_str.str();
-        release_log << warning_str.str();
+        results_info << "Possible mistake: " << "line: " << std::setw(3)
+        << line_counter << ", word: " << std::setw(3)
+        << word_counter << ": " << req << std::endl;
     }
-
     // запрос с двумя словами слева и справа
     // TODO or not?
 }
@@ -345,13 +356,10 @@ void text_analyzer::analyze(logger &log) {
 
     // для последующей записи в лог. Накапливаем результаты в них, чтобы потом
     // записать в лог все Found, а потом все результаты запросов. Чтобы не вперемешку было, а последовательно
-    stringstream release_log;
+    stringstream results_info;
+    stringstream found_info;
 
-    stringstream results_debug_log;
-    stringstream found_debug_log;
-
-    found_debug_log << text_.str() << std::endl;
-
+    string log_mode = log.get_severity();
 
     // читаем целиком строку из стрима, ведем учет количества строк
     string line;
@@ -444,15 +452,18 @@ void text_analyzer::analyze(logger &log) {
 
 
                             // пишем в лог дебага список найденных предлогов
-                            found_debug_log << "Found" << std::setw(15) << it->first << "   "
-                            << " at line: " << std::setw(5) << line_counter
-                            << "    word: " << std::setw(5) << sentence[i].second << std::endl;
+                            if (log_mode == "DEBUG") {
 
-                            int len = it->second;
+                                found_info << "Found" << std::setw(15) << it->first
+                                << "   " << " at line: " << std::setw(5) << line_counter
+                                << "    word: " << std::setw(5) << sentence[i].second << std::endl;
+                            }
+
+                            size_t len = it->second;
 
                             send_and_log_requests(sentence, i, len, requester,
                                                   line_counter, sentence[i].second,
-                                                  results_debug_log, release_log);
+                                                  results_info, log_mode);
 
                             //смещаемся в смысловой фразе на количество слов предлога,
                             // as far as - на три слова вправо и продолжаем искать после них
@@ -467,18 +478,13 @@ void text_analyzer::analyze(logger &log) {
             }
         }
     }
-    found_debug_log << std::endl;
-    results_debug_log << std::endl;
-    release_log << std::endl;
 
 
-
-
-    // а почему тут не работает шаблонная версия?
-
-
-
-    log.write_log(found_debug_log.str());
-    log.write_log(results_debug_log.str());
-    log.write_log(release_log.str(), "RELEASE");
+    // почему шаблонный оператор << не работает (undefined reference),
+    // если определить его в logger.cpp, а не в logger.hpp??????????????????????????????????????????????????????????????
+    if (log_mode == "DEBUG") {
+        log << text_.str() << (string)"\n";
+        log << found_info.str() << (string)"\n";
+    }
+    log << results_info.str();
 }

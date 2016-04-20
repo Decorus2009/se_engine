@@ -58,7 +58,7 @@ int main(int argc, char **argv) {
 	text_analyzer analyzer(text_file);
 	analyzer.analyze(log);
 
-	std::cout << "LOG: " << std::endl << std::endl;
+	std::cout << std::endl;
 	log.print_log();
 
 	return 0;
