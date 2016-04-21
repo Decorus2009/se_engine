@@ -7,37 +7,21 @@
 #include <algorithm>
 #include <ctype.h>
 
-
 using std::map;
 using std::pair;
 using std::vector;
 using std::string;
 using std::stringstream;
 
-text_analyzer::text_analyzer(std::ifstream& text_file) : dictionary_() {
+text_analyzer::text_analyzer(std::ifstream& text_file) try : dictionary_() {
 
     text_ << text_file.rdbuf();
 }
-// never used
-bool is_begin(string const& word) {
-/*
- * предлоги, начинающиеся с '. Рассмотреть их отдельно?
- * Как не перепутать с началом обычной фразы в кавычках?
- * 'long - вполне может быть началом фразы в кавычках со словом long.
- * Предлог ни при чем. Забить и всё равно гуглить?
- * Также можно просто в списке предлогов убрать '. Кажется, яндексу пофиг на ' при поиске.
-    'bout
-    'gainst
-    'long
-    'mong
-    'mongst
-    'round
-    'neath
-    'til
-    'pon
-    'twixt
-*/
-    return !isalpha(word[0]);
+
+catch (std::exception const& e) {
+
+    std::cerr << "Error in opening/reading dictionary" << std::endl;
+    throw;
 }
 
 bool is_end(string const& word) {

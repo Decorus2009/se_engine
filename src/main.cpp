@@ -29,37 +29,37 @@ int main(int argc, char **argv) {
         std::cerr << "Wrong mode" << std::endl;
         return 1;
     }
-	std::ifstream text_file;
+
+
+    std::ifstream text_file;
+    text_file.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     try {
         text_file.open(argv[2], std::ios_base::binary);
-        if (!text_file) {
-            throw std::ios::failure("Error: could not open text file") ;
-        }
+//        while (!text_file.eof()) text_file.get();
+//        text_file.close();
     }
-    catch(std::exception const& e) {
-        std::cerr << e.what() << std::endl;
-		return 1;
+    catch (std::ifstream::failure e) {
+        std::cerr << "Error: could not open/read a text file" << std::endl;
+        //std::cerr << e.what() << std::endl;
+
+        return 1;
+    }
+
+    try {
+        text_analyzer analyzer(text_file);
+        analyzer.analyze(log);
+        std::cout << std::endl;
+        log.print_log();
+
+    }
+    catch (std::exception const& e) {
+
+        std::cerr << "Something bad happened" << std::endl;
+        return 1;
     }
 
 
 
-
-
-
-	// exception бросать везде, где используется файл и не только
-	// см. пример на сplusplus ifstream.exceptions()
-
-
-
-
-
-
-
-	text_analyzer analyzer(text_file);
-	analyzer.analyze(log);
-
-	std::cout << std::endl;
-	log.print_log();
 
 	return 0;
 }

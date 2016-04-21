@@ -9,10 +9,6 @@ struct logger {
 public:
     logger(std::string const &mode);
 
-//    template<class T>
-//    void write_log(T const& val, std::string mode = "DEBUG");
-
-//    void write_log(std::string info, std::string mode = "DEBUG");
     template <typename T>
     logger& operator<<(T const& info) {
         storage_ << info;
@@ -26,11 +22,9 @@ public:
     logger &operator=(logger const &) = delete;
 
 private:
-//    std::stringstream storage_debug_;
-//    std::stringstream storage_release_;
+
     std::string severity_;
     std::stringstream storage_;
 };
-
 
 #endif //LOGGER_HPP
