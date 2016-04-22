@@ -26,7 +26,7 @@ USER_TEST_DIR = ../test
 CPPFLAGS += -isystem $(GTEST_DIR)/include
 
 # Flags passed to the C++ compiler.
-CXXFLAGS += -g -Wall -std=c++11 -Wextra -pthread
+CXXFLAGS += -g -std=c++11 -pthread #-Wall -Wextra
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
@@ -72,6 +72,15 @@ gtest_main.a : gtest-all.o gtest_main.o
 # gtest_main.a, depending on whether it defines its own main()
 # function.
 
+yandex_requester.o : $(USER_SRC_DIR)/yandex_requester.cpp $(USER_SRC_DIR)/yandex_requester.hpp $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_SRC_DIR)/yandex_requester.cpp
+
+prepositions_dictionary.o : $(USER_SRC_DIR)/prepositions_dictionary.cpp $(USER_SRC_DIR)/prepositions_dictionary.hpp $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_SRC_DIR)/prepositions_dictionary.cpp
+
+logger.o : $(USER_SRC_DIR)/logger.cpp $(USER_SRC_DIR)/logger.hpp $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_SRC_DIR)/logger.cpp
+
 text_analyzer.o : $(USER_SRC_DIR)/text_analyzer.cpp $(USER_SRC_DIR)/text_analyzer.hpp $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_SRC_DIR)/text_analyzer.cpp
 
@@ -79,5 +88,5 @@ text_analyzer_unittest.o : $(USER_TEST_DIR)/text_analyzer_unittest.cpp \
     			$(USER_SRC_DIR)/text_analyzer.hpp $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_TEST_DIR)/text_analyzer_unittest.cpp
 
-text_analyzer_unittest : text_analyzer.o text_analyzer_unittest.o gtest_main.a
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
+text_analyzer_unittest : text_analyzer.o yandex_requester.o prepositions_dictionary.o logger.o text_analyzer_unittest.o gtest_main.a
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread -lcurl -lexpat $^ -o $@
