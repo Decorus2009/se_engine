@@ -8,7 +8,7 @@ prepositions_dictionary::prepositions_dictionary() {
     std::ifstream prepositions_list;
     prepositions_list.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     try {
-        prepositions_list.open("/home/decorus/Dropbox/CSC/Practice/I/se_engine/prepositions_list.txt");
+        prepositions_list.open("prepositions_list.txt");
     }
     catch (std::ifstream::failure e) {
         //std::cerr << "Error: could not open dictionary file" << std::endl;
