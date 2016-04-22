@@ -65,6 +65,7 @@
 
 #include "sample3-inl.h"
 #include "gtest/gtest.h"
+#include <iostream>
 
 // To use a test fixture, derive a class from testing::Test.
 class QueueTest : public testing::Test {
@@ -75,6 +76,7 @@ class QueueTest : public testing::Test {
   // should define it if you need to initialize the varaibles.
   // Otherwise, this can be skipped.
   virtual void SetUp() {
+      std::cout << "setting up" << std::endl;
     q1_.Enqueue(1);
     q2_.Enqueue(2);
     q2_.Enqueue(3);
