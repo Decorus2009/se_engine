@@ -15,9 +15,15 @@ public:
     text_analyzer &operator=(text_analyzer const &) = delete;
 
     void analyze(logger &log);
+
+    std::string const &get_found_preposition(size_t ind);
 private:
     std::stringstream text_;
     prepositions_dictionary dictionary_;
+
+
+    // for test
+    std::vector<std::string> found_prepositions_;
 };
 
 

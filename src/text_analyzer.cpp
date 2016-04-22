@@ -14,10 +14,8 @@ using std::string;
 using std::stringstream;
 
 text_analyzer::text_analyzer(std::ifstream& text_file) try : dictionary_() {
-
     text_ << text_file.rdbuf();
 }
-
 catch (std::exception const& e) {
 
     std::cerr << "Error in opening/reading dictionary" << std::endl;
@@ -427,7 +425,7 @@ void text_analyzer::analyze(logger &log) {
                         if (dictionary_.find(it->first)) {
 
 
-
+                            found_prepositions_.push_back(it->first);
 
                             // ПОЧЕМУ ВСЕ ЕДЕТ, ЕСЛИ КАВЫЧКУ ДОБАЛЯТЬ? "/' ???????????????????????????????????????????????????????????
 
@@ -471,4 +469,8 @@ void text_analyzer::analyze(logger &log) {
         log << found_info.str() << (string)"\n";
     }
     log << results_info.str();
+}
+
+std::string const &text_analyzer::get_found_preposition(size_t ind) {
+    return found_prepositions_.at(ind);
 }
