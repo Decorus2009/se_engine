@@ -1,5 +1,5 @@
 #include "../src/text_analyzer.hpp"
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include <iostream>
 
 // To use a test fixture, derive a class from testing::Test.
@@ -11,11 +11,20 @@ struct TextAnalyzerTest : testing::Test {
     // should define it if you need to initialize the varaibles.
     // Otherwise, this can be skipped.
     virtual void SetUp() {
-        std::cout << "setting up" << std::endl;
+        std::cout << "setting up!" << std::endl;
 
         std::ifstream text_file;
-        text_file.open("~/Dropbox/CSC/Practice/I/se_engine/small_text_correct.txt", std::ios_base::binary);
-        analyzer_ = new text_analyzer(text_file);
+        text_file.open("small_text_correct.txt", std::ios_base::binary);
+        if( text_file.is_open() ) {
+            std::cout << "File Opened." << "\n";
+            analyzer_ = new text_analyzer(text_file);
+            logger log("DEBUG");
+            analyzer_->analyze(log);
+        }
+        else {
+            std::cout << "Error: file not found." << "\n";
+            throw 5;
+        }
     }
 
 
@@ -35,5 +44,5 @@ struct TextAnalyzerTest : testing::Test {
 
 TEST_F(TextAnalyzerTest, TestFirstFoundPreposition) {
 
-    EXPECT_EQ("on", analyzer_->get_found_preposition(0));
+    EXPECT_EQ("off", analyzer_->get_found_preposition(0));
 }
