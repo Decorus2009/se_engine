@@ -5,8 +5,8 @@
 #include <expat.h>
 #include <curl/curl.h>
 
-struct yandex_requester {
-
+struct yandex_requester
+{
 public:
 
     yandex_requester();
@@ -16,8 +16,8 @@ public:
     yandex_requester &operator=(yandex_requester const &) = delete;
 private:
 
-    struct yandex_xml_parser {
-
+    struct yandex_xml_parser
+    {
     public:
 
         //приходится его объявить
@@ -34,8 +34,8 @@ private:
         static void handle_data(void *data, const char *content, int length);
     };
 
-    struct yandex_request_sender {
-
+    struct yandex_request_sender
+    {
     public:
 
         yandex_request_sender();

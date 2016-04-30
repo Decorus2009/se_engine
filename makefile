@@ -13,7 +13,7 @@ LIBS_TEST = -lgtest -lpthread -lgtest_main
 
 all: pre-build exe
 
-test: pre-build test_main
+test: pre-build test_exe
 
 bin/main.o: src/main.cpp src/yandex_requester.hpp src/prepositions_dictionary.hpp src/logger.hpp
 	$(CC) $(CFLAGS) $< -o $@
@@ -30,16 +30,17 @@ bin/yandex_requester.o: src/yandex_requester.cpp src/yandex_requester.hpp
 bin/logger.o: src/logger.cpp src/logger.hpp
 	$(CC) $(CFLAGS) $< -o $@
 
-bin/test.o: test/test.cpp
+bin/test_main.o: test_src/test_main.cpp
 	$(CC) $(CFLAGS) $(CFLAGS_TEST) $< -o $@
 
-bin/text_analyzer_unittest.o: test/text_analyzer_unittest.cpp  src/text_analyzer.hpp
+bin/text_analyzer_unittest.o: test_src/text_analyzer_unittest.cpp src/text_analyzer.hpp
 	$(CC) $(CFLAGS) $(CFLAGS_TEST) $< -o $@
+
 
 exe: $(OBJECTS) bin/main.o
 	$(CC) $^ $(LIBS) -o $@
 
-test_main: $(OBJECTS) $(OBJECTS_TEST) bin/test.o
+test_exe: $(OBJECTS) $(OBJECTS_TEST) bin/test_main.o
 	$(CC) $^ $(LIBS) $(LIBS_TEST) -o $@
 
 
@@ -47,4 +48,4 @@ pre-build:
 	mkdir -p bin
 
 clean:
-	rm -rf ./bin *.o exe test_main
+	rm -rf ./bin *.o exe test_exe

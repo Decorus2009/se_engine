@@ -2,6 +2,8 @@
 #include <iostream>
 #include <sstream>
 
+#include <fstream>
+
 using std::string;
 using std::stringstream;
 
@@ -11,6 +13,13 @@ long long yandex_requester::send_request(std::string const &req_str) {
 
     yandex_request_sender ya_req_sen_tmp;
     string xml = ya_req_sen_tmp.send_curl_request(req_str);
+
+    std::ofstream xml_file("xml_resp.xml");
+    xml_file << xml;
+
+
+
+
     return yandex_xml_parser::parse(xml);
 }
 
@@ -104,7 +113,13 @@ string yandex_requester::yandex_request_sender::send_curl_request(std::string co
     //showmecaptcha_ = "yes";
 
     url_ = yand_addr_ + "user=" + user_ + "&key=" + api_key_ +
-           "&l10n=" + l10n_ + "&filter=" + filter_;
+           "&l10n=" + l10n_ + "&filter=" + filter_
+
+
+
+           //попытка отключения автоисправления поиска
+           // И, КАЖЕТСЯ, ОНО РАБОТАЕТ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!111
+           + "&noreask=1";
 
 
     //надо сделать поддержку percent-encoding

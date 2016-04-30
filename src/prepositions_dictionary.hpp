@@ -1,9 +1,10 @@
 #ifndef PREPOSITIONS_DICTIONARY_HPP
 #define PREPOSITIONS_DICTIONARY_HPP
 
-#include <map>
+#include <set>
 #include <string>
 #include <fstream>
+#include <iostream>
 
 /*
 * Метаинформация:
@@ -22,18 +23,26 @@
 * again, gain - устар от against. Для них порог должен быть маленький, но поиск будет работать некорректно, найдет много.
 */
 
-struct prepositions_dictionary {
+struct prepositions_dictionary
+{
 
 public:
-    prepositions_dictionary();
+    prepositions_dictionary(std::string const& lang);
 
-    bool find(std::string const &word);
+    bool find(std::string const& word) const;
 
-    prepositions_dictionary(prepositions_dictionary const &) = delete;
-    prepositions_dictionary &operator=(prepositions_dictionary const &) = delete;
+    prepositions_dictionary(prepositions_dictionary const&) = delete;
+    prepositions_dictionary& operator=(prepositions_dictionary const&) = delete;
+
+    inline void print()
+    {
+        std::cout << "Prepositions List: " << std::endl;
+        for (auto i : dictionary_) { std::cout << i << std::endl; }
+    }
 
 private:
-    std::map<std::string, bool> dictionary_;
+    //std::map<std::string, bool> dictionary_;
+    std::set<std::string> dictionary_;
 };
 
 #endif
