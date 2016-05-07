@@ -2,3 +2,6 @@
 *~
 #exec
 backup/
+src/CMakeLists.txt
+src/.idea
+google_test/

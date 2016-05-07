@@ -20,7 +20,6 @@ private:
     {
     public:
 
-        //приходится его объявить
         yandex_xml_parser();
         yandex_xml_parser(yandex_xml_parser const &) = delete;
         yandex_xml_parser &operator=(yandex_xml_parser const &) = delete;
@@ -43,13 +42,13 @@ private:
         yandex_request_sender(yandex_request_sender const &) = delete;
         yandex_request_sender &operator=(yandex_request_sender const &) = delete;
 
-        std::string send_curl_request(std::string const &req_str);
+        std::string send_curl_request(std::string const &query);
 
     private:
 
-        std::string yand_addr_, user_, api_key_, filter_, l10n_,
-                    xml_encode_type_, req_header_, query_, sortby_,
-                    maxpassages_, page_, groupby_, url_, request_;
+        std::string ya_addr_ = "https://yandex.com/search/xml?",
+                    user_ = "decorus2009",
+                    api_key_ = "03.88707539:10c39ba1ba0ca5ad3a32a1f9387d0da2";
         //std::string showmecaptcha_;
 
         CURL *curl_;

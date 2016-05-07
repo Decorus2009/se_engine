@@ -45,7 +45,8 @@ private:
                                               size_t begin_ind, size_t len);
 
     void send_and_log_requests(std::vector<std::pair<std::string, size_t> > const& sentence, size_t begin_ind,
-                               size_t len, yandex_requester& requester, size_t line_counter, size_t word_counter);
+                               size_t len, yandex_requester& requester, size_t line_counter, size_t word_counter,
+                               prepositions_dictionary& dictionary, std::string const& preposition);
 
 
 
@@ -65,6 +66,10 @@ private:
         long long result_;
         size_t line_counter_;
         size_t word_counter_;
+
+        // результат запроса только предлога, без остальных слов (из словаря)
+        std::string preposition_;
+        uint64_t reference_result_;
     };
     std::vector<sent_request> all_sent_requests_info_;
 

@@ -10,7 +10,8 @@ public:
     logger(std::string const &mode);
 
     template <typename T>
-    logger& operator<<(T const& info) {
+    logger& operator<<(T const& info)
+    {
         storage_ << info;
         return *this;
     }

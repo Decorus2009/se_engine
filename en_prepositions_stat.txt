@@ -1,0 +1,532 @@
+aboard
+2260619
+about
+1914918864
+'bout
+2408849
+bout
+2408843
+above
+10572140
+bove
+369565
+abreast
+1303624
+abroad
+4089512
+absent
+2255045
+across
+10435359
+cross
+42267914
+adjacent
+2107536
+after
+866603261
+against
+35071913
+'gainst
+95304
+gainst
+95163
+again
+90684762
+gain
+7332715
+along
+8318062
+'long
+165741427
+alongst
+3928
+alongside
+2265209
+amid
+2348301
+amidst
+2189453
+mid
+20148199
+midst
+2213197
+among
+10621383
+amongst
+2264699
+'mong
+2214233
+mong
+2214928
+'mongst
+33429
+apropos
+724271
+apud
+378542
+around
+61034317
+'round
+32380709
+round
+32597483
+as
+900533570
+astride
+353006
+at
+1160735961
+atop
+2208494
+ontop
+786387
+bar
+83430074
+before
+76662808
+afore
+490283
+tofore
+22387
+behind
+35023755
+ahind
+3836
+below
+8006322
+ablow
+72148
+alow
+176778
+beneath
+2372448
+'neath
+1798561
+neath
+1798031
+beside
+2299373
+besides
+2255794
+between
+47138725
+atween
+22777
+beyond
+24205827
+ayond
+3361
+but
+532934762
+by
+2676344056
+chez
+2488250
+circa
+2344364
+c.
+1568174719
+ca.
+81867334
+come
+57051701
+dehors
+919078
+despite
+2753027
+spite
+2224429
+down
+143408277
+during
+31058476
+except
+2382973
+for
+2091721500
+from
+1658050715
+in
+2774233348
+inside
+41270061
+into
+378020590
+less
+21199923
+like
+1311082070
+minus
+3101777
+near
+48257875
+nearer
+2106678
+nearest
+2419645
+anear
+45646
+notwithstanding
+2172182
+of
+2447172203
+o'
+604362494
+off
+282036793
+on
+2123182273
+onto
+2513900
+opposite
+2439727
+out
+2167942131
+outen
+328171
+outside
+11418027
+over
+844525029
+o'er
+122249
+pace
+2675189
+past
+27062291
+per
+49860748
+post
+810736527
+pre
+36312646
+pro
+455452160
+qua
+2467375
+re
+327553692
+sans
+6012172
+save
+85033211
+sauf
+1411792
+short
+63837929
+since
+17221143
+sithence
+4239
+than
+685713042
+through
+87348455
+thru
+2572387
+throughout
+2428992
+thruout
+36882
+to
+2596894150
+toward
+2430328
+towards
+4902018
+under
+72724625
+underneath
+2269326
+unlike
+2258640
+until
+11370824
+'til
+6256015
+til
+6252870
+till
+10512535
+up
+2051857191
+upon
+9258272
+'pon
+2341378
+pon
+2340094
+upside
+2337663
+versus
+7707072
+vs.
+206451258
+v.
+1260265655
+via
+55115155
+vice
+12420292
+vis-à-vis
+1088939
+with
+2072360578
+w/
+1088498186
+within
+19932801
+w/i
+8751417
+without
+64753724
+w/o
+8653087
+worth
+16692621
+according to
+220559166
+ahead of
+21760343
+apart from
+5864736
+as for
+55035754
+as of
+147052320
+as per
+3155336
+as regards
+234643
+aside from
+2992840
+astern of
+22787
+back to
+2512151890
+because of
+424107557
+close to
+262863518
+due to
+301494391
+except for
+9215176
+far from
+18903931
+inside of
+43297660
+instead of
+534560698
+left of
+294128
+near to
+1036220
+next to
+139100523
+opposite of
+2948990
+opposite to
+701458
+out from
+21086106
+out of
+1255805076
+outside of
+108364663
+owing to
+2900398
+prior to
+24850782
+pursuant to
+2397943
+rather than
+5902524
+regardless of
+29350310
+right of
+31358773
+subsequent to
+520017
+such as
+369532330
+thanks to
+221389528
+up to
+2007204028
+as far as
+5543857
+as opposed to
+7143300
+as soon as
+16677981
+as well as
+588645352
+at the behest of
+268789
+by means of
+3056177
+by virtue of
+2595060
+for the sake of
+4765501
+in accordance with
+13451191
+in addition to
+68832595
+in case of
+6556093
+in front of
+156072198
+in lieu of
+1964079
+in order to
+1069105387
+in place of
+69986
+in point of
+9388
+in spite of
+6811530
+on account of
+25201
+on behalf of
+25536850
+on top of
+166527083
+with regard to
+3633383
+with respect to
+5540459
+with a view to
+19284
+abaft
+89912
+abeam
+71288
+aboon
+32536
+abun
+168873
+abune
+202348
+afront
+43446
+ajax
+5709372
+alongst
+3928
+aloof
+663775
+anenst
+4360
+anent
+101992
+athwart
+73711
+atop
+2205196
+ontop
+787103
+behither
+770
+ben
+57625310
+betwixt
+625336
+atwix
+12557
+'twixt
+163738
+twixt
+163716
+bewest
+4594
+benorth
+1013
+emforth
+665
+ere
+2253312
+or
+1932509765
+forby
+86659
+foreanent
+8741
+forenenst
+1180
+foregain
+525
+foregainst
+1425
+forth
+2362144
+fromward
+1336
+froward
+51113
+fromwards
+414
+furth
+467282
+gainward
+1460461
+imell
+18762
+inmid
+9389
+inmiddes
+1715
+mang
+2283943
+mauger
+100185
+maugre
+29479
+nearhand
+883
+next
+816405295
+nigh
+2030195
+anigh
+13424
+anighst
+484
+outwith
+238859
+overthwart
+1688
+quoad
+64073
+umbe
+43160
+umb
+867512
+um
+33631396
+unto
+2211691
+uptill
+27996
+ago
+52731001
+apart
+9667973
+aside
+2294740
+aslant
+69907
+away
+36694085
+hence
+2309824
+notwithstanding
+2173075
+on
+2183052992
+through
+87348455
+withal
+164358

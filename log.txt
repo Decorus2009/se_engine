@@ -1,0 +1,286 @@
+LOG:
+----------------------------------------------------------------------------------------------------------
+Incorrect: He loves with me.
+Correct: He loves me.
+
+Incorrect: We discussed about the matter.
+Correct: We discussed the matter.
+
+Incorrect: We reached at the airport at 9 pm.
+Correct: We reached the airport at 9 pm.
+
+Incorrect: I have ordered for his dismissal.
+Correct: I have ordered his dismissal.
+
+Incorrect: He married with his friend’s sister.
+Correct: He married his friend’s sister.
+
+Incorrect: She entered into the room.
+Correct: She entered the room.
+
+Incorrect: The child resembles to its mother.
+Correct: The child resembles its mother.
+
+Incorrect: He is intelligence, but he lacks of experience.
+Correct: He is intelligence but he lacks experience
+
+Incorrect: What is the time in your watch?
+Correct: What is the time by your watch?
+
+Incorrect: We traveled in train.
+Correct: We traveled by train.
+
+Incorrect: He is angry upon me.
+Correct: He is angry with me.
+
+Incorrect: I am pleased at you.
+Correct: I am pleased with you.
+
+Incorrect: He was trembling in rage.
+Correct: He was trembling with rage.
+
+Incorrect: Who is in the phone? It is John.
+Correct: Who is on the phone? It is John.
+
+Incorrect: There was an interesting show at TV.
+Correct: There was an interesting show on TV.
+
+Incorrect: She washed her face in water.
+Correct: She washed her face with water.
+
+Incorrect: The snake was killed by a stone.
+Correct: The snake was killed with a stone.
+
+Incorrect: I go to school by foot.
+Correct: I go to school on foot.
+
+Incorrect: I congratulated her for her success.
+Correct: I congratulated her on her success.
+
+
+Mistake:        He was prevented to come.
+Correct:        He was prevented from coming.
+Mistake:        She insisted to pay.
+Correct:        She insisted on paying.
+Mistake:        Let's go for riding.
+Correct:        Let's go riding.
+Mistake:        This is the first time I have seen a movie since a long time.
+Correct:        I haven't seen a movie for a long time.
+Mistake:        I am ill since two weeks.
+Correct:        I have been ill for two weeks.
+Mistake:        It was the worst storm since ten years.
+Correct:        It was the worst storm in ten years.
+Mistake:        Our company's performance is inferior than theirs.
+Correct:        Our company's performance is inferior to theirs.
+Mistake:        He is senior than me.
+Correct:        He is senior to me.
+Mistake:        Send this letter on my new address.
+Correct:        Send this letter to my new address.
+Mistake:        He goes in the school.
+Correct:        He goes to the school.
+Mistake:        He goes on his work.
+Correct:        He goes to his work.
+Mistake:        I am going to home.
+Correct:        I am going home.
+Mistake:        I'm going at home.
+Correct:        I am going home.
+
+
+Come to here
+The sun rises from the East.
+The thief got in from the window.
+Let's begin from page 10.
+There is a limit in my patience.
+Please wait inside the white line.
+Is your house insured for fire?
+I have no house to live.
+What a dirty face! Look at the mirror.
+This is the key of my room.
+I am going to take a two-year course of English.
+It's about eleven now, Hurry up!
+This resembles to that.
+Your mother lacks of tact.
+We are now approaching to Victoria Terminus.
+He reached to Singapore.
+She married to her boss.
+She married with her boss.
+
+Prepositions:
+Found           with    at line:     1    word:     4
+Found          about    at line:     4    word:     4
+Found             at    at line:     7    word:     4
+Found             at    at line:     7    word:     7
+Found             at    at line:     8    word:     6
+Found            for    at line:    10    word:     5
+Found           with    at line:    13    word:     4
+Found           into    at line:    16    word:     4
+Found             to    at line:    19    word:     5
+Found            but    at line:    22    word:     5
+Found             of    at line:    22    word:     8
+Found             in    at line:    25    word:     6
+Found             by    at line:    26    word:     6
+Found             in    at line:    28    word:     4
+Found             by    at line:    29    word:     4
+Found           upon    at line:    31    word:     5
+Found           with    at line:    32    word:     5
+Found             at    at line:    34    word:     5
+Found           with    at line:    35    word:     5
+Found             in    at line:    37    word:     5
+Found           with    at line:    38    word:     5
+Found             in    at line:    40    word:     4
+Found             on    at line:    41    word:     4
+Found             at    at line:    43    word:     7
+Found             on    at line:    44    word:     7
+Found             in    at line:    46    word:     6
+Found           with    at line:    47    word:     6
+Found             by    at line:    49    word:     6
+Found           with    at line:    50    word:     6
+Found             to    at line:    52    word:     4
+Found             by    at line:    52    word:     6
+Found             to    at line:    53    word:     4
+Found             on    at line:    53    word:     6
+Found            for    at line:    55    word:     5
+Found             on    at line:    56    word:     5
+Found             to    at line:    59    word:     5
+Found           come    at line:    59    word:     6
+Found           from    at line:    60    word:     5
+Found             to    at line:    61    word:     4
+Found             on    at line:    62    word:     4
+Found            for    at line:    63    word:     4
+Found          since    at line:    65    word:    12
+Found            for    at line:    66    word:     7
+Found          since    at line:    67    word:     5
+Found            for    at line:    68    word:     6
+Found          since    at line:    69    word:     7
+Found             in    at line:    70    word:     7
+Found           than    at line:    71    word:     7
+Found             to    at line:    72    word:     7
+Found           than    at line:    73    word:     5
+Found             to    at line:    74    word:     5
+Found             on    at line:    75    word:     5
+Found             to    at line:    76    word:     5
+Found             in    at line:    77    word:     4
+Found             to    at line:    78    word:     4
+Found             on    at line:    79    word:     4
+Found             to    at line:    80    word:     4
+Found             to    at line:    81    word:     5
+Found             at    at line:    83    word:     4
+Found           from    at line:    88    word:     4
+Found             in    at line:    89    word:     4
+Found           from    at line:    89    word:     5
+Found           from    at line:    90    word:     3
+Found             in    at line:    91    word:     5
+Found         inside    at line:    92    word:     3
+Found            for    at line:    93    word:     5
+Found             to    at line:    94    word:     5
+Found             at    at line:    95    word:     6
+Found             of    at line:    96    word:     5
+Found             to    at line:    97    word:     4
+Found             of    at line:    97    word:     9
+Found          about    at line:    98    word:     2
+Found             up    at line:    98    word:     6
+Found             to    at line:    99    word:     3
+Found             of    at line:   100    word:     4
+Found             to    at line:   101    word:     5
+Found             to    at line:   102    word:     3
+Found             to    at line:   103    word:     3
+Found           with    at line:   104    word:     3
+
+                      loves with me:           18	at line:   1    word:  4    preposition:            with    reference:  2072360578  ratio:        8.68574716e-09
+         discussed about the matter:           20	at line:   4    word:  4    preposition:           about    reference:  1914918864  ratio:        1.04443067e-08
+             reached at the airport:          111	at line:   7    word:  4    preposition:              at    reference:  1160735961  ratio:        9.56289834e-08
+                  at the airport at:         6871	at line:   7    word:  7    preposition:              at    reference:  1160735961  ratio:        5.91952023e-06
+             reached the airport at:          199	at line:   8    word:  6    preposition:              at    reference:  1160735961  ratio:        1.71442952e-07
+                    ordered for his:          347	at line:  10    word:  5    preposition:             for    reference:  2091721500  ratio:        1.65892065e-07
+                   married with his:         1991	at line:  13    word:  4    preposition:            with    reference:  2072360578  ratio:        9.60740144e-07
+              entered into the room:          303	at line:  16    word:  4    preposition:            into    reference:   378020590  ratio:        8.01543641e-07
+                   resembles to its:          105	at line:  19    word:  5    preposition:              to    reference:  2596894150  ratio:        4.04329148e-08
+                       but he lacks:         5033	at line:  22    word:  5    preposition:             but    reference:   532934762  ratio:        9.44393265e-06
+                lacks of experience:           65	at line:  22    word:  8    preposition:              of    reference:  2447172203  ratio:        2.65612693e-08
+                       time in your:        12648	at line:  25    word:  6    preposition:              in    reference:  2774233348  ratio:        4.55909738e-06
+                       time by your:          290	at line:  26    word:  6    preposition:              by    reference:  2676344056  ratio:        1.08356771e-07
+                  traveled in train:           29	at line:  28    word:  4    preposition:              in    reference:  2774233348  ratio:        1.04533384e-08
+                  traveled by train:         3132	at line:  29    word:  4    preposition:              by    reference:  2676344056  ratio:        1.17025313e-06
+                      angry upon me:          157	at line:  31    word:  5    preposition:            upon    reference:     9258272  ratio:        1.69578081e-05   *****
+                      angry with me:        17974	at line:  32    word:  5    preposition:            with    reference:  2072360578  ratio:        8.67320108e-06
+                     pleased at you:            1	at line:  34    word:  5    preposition:              at    reference:  1160735961  ratio:        8.61522373e-10
+                   pleased with you:          931	at line:  35    word:  5    preposition:            with    reference:  2072360578  ratio:        4.49246145e-07
+                  trembling in rage:          227	at line:  37    word:  5    preposition:              in    reference:  2774233348  ratio:        8.18244075e-08
+                trembling with rage:         4354	at line:  38    word:  5    preposition:            with    reference:  2072360578  ratio:        2.10098573e-06
+                    is in the phone:          227	at line:  40    word:  4    preposition:              in    reference:  2774233348  ratio:        8.18244075e-08
+                    is on the phone:         3300	at line:  41    word:  4    preposition:              on    reference:  2123182273  ratio:         1.5542707e-06
+                         show at TV:          902	at line:  43    word:  7    preposition:              at    reference:  1160735961  ratio:        7.77093181e-07
+                         show on TV:        12682	at line:  44    word:  7    preposition:              on    reference:  2123182273  ratio:         5.9731094e-06
+                      face in water:          447	at line:  46    word:  6    preposition:              in    reference:  2774233348  ratio:        1.61125595e-07
+                    face with water:         4339	at line:  47    word:  6    preposition:            with    reference:  2072360578  ratio:        2.09374761e-06
+                  killed by a stone:          564	at line:  49    word:  6    preposition:              by    reference:  2676344056  ratio:        2.10735237e-07
+                killed with a stone:          275	at line:  50    word:  6    preposition:            with    reference:  2072360578  ratio:        1.32698915e-07
+                       go to school:       221923	at line:  52    word:  4    preposition:              to    reference:  2596894150  ratio:        8.54570834e-05   *****
+                     school by foot:          546	at line:  52    word:  6    preposition:              by    reference:  2676344056  ratio:        2.04009645e-07
+                       go to school:       223926	at line:  53    word:  4    preposition:              to    reference:  2596894150  ratio:        8.62283894e-05   *****
+                     school on foot:         2331	at line:  53    word:  6    preposition:              on    reference:  2123182273  ratio:         1.0978803e-06
+                        her for her:        14372	at line:  55    word:  5    preposition:             for    reference:  2091721500  ratio:        6.87089558e-06
+                         her on her:        13028	at line:  56    word:  5    preposition:              on    reference:  2123182273  ratio:        6.13607233e-06
+                  prevented to come:           47	at line:  59    word:  5    preposition:              to    reference:  2596894150  ratio:        1.80985428e-08
+                  prevented to come:           49	at line:  59    word:  6    preposition:            come    reference:    57051701  ratio:        8.58870097e-07
+              prevented from coming:         4000	at line:  60    word:  5    preposition:            from    reference:  1658050715  ratio:        2.41247144e-06
+                    insisted to pay:          653	at line:  61    word:  4    preposition:              to    reference:  2596894150  ratio:        2.51454223e-07
+                 insisted on paying:         7851	at line:  62    word:  4    preposition:              on    reference:  2123182273  ratio:         3.6977513e-06
+                      go for riding:          321	at line:  63    word:  4    preposition:             for    reference:  2091721500  ratio:        1.53462112e-07
+                 movie since a long:          122	at line:  65    word: 12    preposition:           since    reference:    17221143  ratio:         7.0843149e-06
+                   movie for a long:          702	at line:  66    word:  7    preposition:             for    reference:  2091721500  ratio:        3.35608732e-07
+                      ill since two:          124	at line:  67    word:  5    preposition:           since    reference:    17221143  ratio:        7.20045121e-06
+                        ill for two:          782	at line:  68    word:  6    preposition:             for    reference:  2091721500  ratio:        3.73854741e-07
+                    storm since ten:           12	at line:  69    word:  7    preposition:           since    reference:    17221143  ratio:        6.96817859e-07
+                       storm in ten:          330	at line:  70    word:  7    preposition:              in    reference:  2774233348  ratio:        1.18951782e-07
+               inferior than theirs:            8	at line:  71    word:  7    preposition:            than    reference:   685713042  ratio:        1.16666878e-08
+                 inferior to theirs:          885	at line:  72    word:  7    preposition:              to    reference:  2596894150  ratio:        3.40791711e-07
+                     senior than me:          512	at line:  73    word:  5    preposition:            than    reference:   685713042  ratio:        7.46668021e-07
+                       senior to me:          669	at line:  74    word:  5    preposition:              to    reference:  2596894150  ratio:        2.57615429e-07
+                       letter on my:         2515	at line:  75    word:  5    preposition:              on    reference:  2123182273  ratio:        1.18454267e-06
+                       letter to my:        37559	at line:  76    word:  5    preposition:              to    reference:  2596894150  ratio:        1.44630462e-05   *****
+                 goes in the school:            3	at line:  77    word:  4    preposition:              in    reference:  2774233348  ratio:        1.08137983e-09
+                 goes to the school:          322	at line:  78    word:  4    preposition:              to    reference:  2596894150  ratio:        1.23994272e-07
+                        goes on his:         1959	at line:  79    word:  4    preposition:              on    reference:  2123182273  ratio:        9.22671607e-07
+                        goes to his:         6857	at line:  80    word:  4    preposition:              to    reference:  2596894150  ratio:        2.64046188e-06
+                      going to home:          568	at line:  81    word:  5    preposition:              to    reference:  2596894150  ratio:        2.18722815e-07
+                      going at home:          215	at line:  83    word:  4    preposition:              at    reference:  1160735961  ratio:         1.8522731e-07
+                rises from the East:          536	at line:  88    word:  4    preposition:            from    reference:  1658050715  ratio:        3.23271173e-07
+                        got in from:          546	at line:  89    word:  4    preposition:              in    reference:  2774233348  ratio:         1.9681113e-07
+                 in from the window:          190	at line:  89    word:  5    preposition:            from    reference:  1658050715  ratio:        1.14592394e-07
+                    begin from page:           26	at line:  90    word:  3    preposition:            from    reference:  1658050715  ratio:        1.56810644e-08
+                        limit in my:          418	at line:  91    word:  5    preposition:              in    reference:  2774233348  ratio:        1.50672257e-07
+              wait inside the white:            4	at line:  92    word:  3    preposition:          inside    reference:    41270061  ratio:        9.69225609e-08
+                   insured for fire:          578	at line:  93    word:  5    preposition:             for    reference:  2091721500  ratio:        2.76327417e-07
+                      house to live:         2410	at line:  94    word:  5    preposition:              to    reference:  2596894150  ratio:        9.28031664e-07
+                 Look at the mirror:         3449	at line:  95    word:  6    preposition:              at    reference:  1160735961  ratio:        2.97139067e-06
+                          key of my:         1070	at line:  96    word:  5    preposition:              of    reference:  2447172203  ratio:        4.37239357e-07
+                      going to take:        83361	at line:  97    word:  4    preposition:              to    reference:  2596894150  ratio:        3.21002687e-05   *****
+                  course of English:         6310	at line:  97    word:  9    preposition:              of    reference:  2447172203  ratio:         2.5784863e-06
+                  It's about eleven:            2	at line:  98    word:  2    preposition:           about    reference:  1914918864  ratio:        1.04443067e-09
+                           Hurry up:       838452	at line:  98    word:  6    preposition:              up    reference:  2051857191  ratio:        0.000408630778   *****
+                  resembles to that:          592	at line:  99    word:  3    preposition:              to    reference:  2596894150  ratio:        2.27964625e-07
+                      lacks of tact:           17	at line: 100    word:  4    preposition:              of    reference:  2447172203  ratio:        6.94679352e-09
+            approaching to Victoria:            3	at line: 101    word:  5    preposition:              to    reference:  2596894150  ratio:        1.15522614e-09
+               reached to Singapore:            6	at line: 102    word:  3    preposition:              to    reference:  2596894150  ratio:        2.31045228e-09
+                     married to her:        17105	at line: 103    word:  3    preposition:              to    reference:  2596894150  ratio:        6.58671436e-06
+                   married with her:         1797	at line: 104    word:  3    preposition:            with    reference:  2072360578  ratio:        8.67127091e-07
+
+Possible mistake: line:   1, word:   4: loves with me
+Possible mistake: line:   4, word:   4: discussed about the matter
+Possible mistake: line:  22, word:   8: lacks of experience
+Possible mistake: line:  28, word:   4: traveled in train
+Possible mistake: line:  34, word:   5: pleased at you
+Possible mistake: line:  59, word:   5: prevented to come
+Possible mistake: line:  59, word:   6: prevented to come
+Possible mistake: line:  69, word:   7: storm since ten
+Possible mistake: line:  71, word:   7: inferior than theirs
+Possible mistake: line:  77, word:   4: goes in the school
+Possible mistake: line:  90, word:   3: begin from page
+Possible mistake: line:  92, word:   3: wait inside the white
+Possible mistake: line:  98, word:   2: It's about eleven
+Possible mistake: line: 100, word:   4: lacks of tact
+Possible mistake: line: 101, word:   5: approaching to Victoria
+Possible mistake: line: 102, word:   3: reached to Singapore
+
+runtime = 545.256
