@@ -1,6 +1,8 @@
-#*.[oa]
+*.[oa]
+*.out
 *~
 #exec
+bin/
 backup/
 src/CMakeLists.txt
 src/.idea
