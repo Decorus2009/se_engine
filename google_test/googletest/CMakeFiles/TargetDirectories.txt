@@ -1,2 +1,0 @@
-/home/decorus/Dropbox/CSC/Practice/I/se_engine/google_test/googletest/CMakeFiles/gtest.dir
-/home/decorus/Dropbox/CSC/Practice/I/se_engine/google_test/googletest/CMakeFiles/gtest_main.dir
