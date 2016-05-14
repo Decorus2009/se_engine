@@ -14,29 +14,21 @@ long long yandex_requester::send_request(std::string const &req_str)
     yandex_request_sender ya_req_sen_tmp;
     string xml = ya_req_sen_tmp.send_curl_request(req_str);
 
-
-
-
-
-
-    //std::ofstream xml_file("/home/decorus/Dropbox/CSC/Practice/I/se_engine/xml_resp.xml");
     std::ofstream xml_file("xml_resp.xml");
     xml_file << xml;
 
-
-
-
-
-
-
-
-
+    // если вернулся xml, в котором нет найденных результатов вообще, только сообщение об ошибке
+    // вернуть 0 найденных документов
+    if (xml.find("Sorry, there are no results for this search") != string::npos)
+    {
+        return 0;
+    }
 
     return yandex_xml_parser::parse(xml);
 }
 
 
-static long long found_res_num = -1;
+static long long found_res_num = 0;
 static bool found_docs_tag_found = false;
 static string last_content;
 
@@ -117,26 +109,12 @@ yandex_request_sender::write_response_data(char *ptr, size_t size, size_t nmemb,
 
 string yandex_requester::yandex_request_sender::send_curl_request(std::string const &query)
 {
-
-
-
-
-    // если работаем с русским текстом, надо менять значение l10n=en
-
-
-
-
-    //showmecaptcha_ = "yes";
-    string url_ = ya_addr_ + "user=" + user_ + "&key=" + api_key_ + "&l10n=en&filter=moderate"
-
-           //попытка отключения автоисправления поиска
-           // И, КАЖЕТСЯ, ОНО РАБОТАЕТ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!111
-           + "&noreask=1";
-
+    //showmecaptcha_ = "yes";                                                    //попытка отключения автоисправления поиска
+    string url_ = ya_addr_ + "user=" + user_ + "&key=" + api_key_ + "&l10n=en&filter=moderate" + "&noreask=1";
 
     //надо сделать поддержку percent-encoding
 
-    string request = (string)"<?xml version=\"1.0\" encoding=\"UTF-8\"?><request><query>" + query +
+    string request = (string)"<?xml version=\"1.0\" encoding=\"UTF-8\"?><request><query>" + "&quot;" + query + "&quot;" +
                      "</query><sortby>rlv</sortby><maxpassages>1</maxpassages><page>0</page>" +
                      "<groupings><groupby attr=\"d\" mode=\"deep\" groups-on-page=\"1\" docs-in-group=\"1\" /></groupings></request>";
 

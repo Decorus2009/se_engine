@@ -22,6 +22,10 @@ public:
     {
         return dictionary_[preposition];
     }
+    inline uint64_t at(std::string const& preposition)
+    {
+        return dictionary_.at(preposition);
+    }
     inline void print()
     {
         std::cout << "Prepositions List: " << std::endl;

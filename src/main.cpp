@@ -50,5 +50,23 @@ int main(int argc, char **argv)
     }
 
     cout << "runtime = " << clock()/1000.0 << endl;
+
+
+
+
+
+
+    if(!setlocale(LC_ALL, "ru_RU.UTF-8")) {
+        perror("setlocale fail");
+    }
+
+
+
+//
+    string line = "fluttered versus the open";
+    yandex_requester ya;
+    cout << ya.send_request(line) << endl;
+
+
     return 0;
 }

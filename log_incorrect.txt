@@ -1,0 +1,578 @@
+LOG:
+----------------------------------------------------------------------------------------------------------
+He was prevented to come.
+He loves with me.
+We discussed about the matter.
+We reached at the airport.
+I have ordered for his dismissal.
+He married with his friend’s sister.
+She entered into the room.
+The child resembles to its mother.
+but he lacks of experience.
+What is the time in your watch?
+We traveled in train.
+He is angry upon me.
+I am pleased at you.
+He was trembling in rage.
+Who is in the phone?
+There was an interesting show at TV.
+She washed her face in water.
+The snake was killed by a stone.
+school by foot.
+I congratulated her for her success.
+She insisted to pay.
+Let's go for riding.
+This is the first time I have seen a movie since a long time.
+I am ill since two weeks.
+It was the worst storm since ten years.
+Our company's performance is inferior than theirs.
+He is senior than me.
+Send this letter on my new address.
+He goes in the school.
+He goes on his work.
+I am going to home.
+I'm going at home.
+Come to here
+The sun rises from the East.
+The thief got in from the window.
+Let's begin from page one.
+There is a limit in my patience.
+Please wait inside the white line.
+Is your house insured for fire?
+I have no house to live.
+Look at the mirror.
+This is the key of my room.
+a two-year course of English.
+It's about eleven now.
+This resembles to that.
+Your mother lacks of tact.
+We are now approaching to Victoria Terminus.
+He reached to Singapore.
+She married to her boss.
+She married with her boss.
+fluttered by the open.
+fluttered in the open.
+fluttered onto the open.
+fluttered beneath the open.
+fluttered into the open.
+fluttered at the open.
+fluttered among the open.
+fluttered away the open.
+fluttered an the open.
+fluttered to the open.
+fluttered the open.
+fluttered amidst the open.
+fluttered round the open.
+fluttered beyond the open.
+fluttered like the open.
+fluttered minus the open.
+fluttered nearest the open.
+fluttered outside the open.
+fluttered since the open.
+fluttered throughout the open.
+fluttered versus the open.
+
+Prepositions:
+Found             to    at line:     1    word:     4
+Found           come    at line:     1    word:     5
+Found           with    at line:     2    word:     3
+Found          about    at line:     3    word:     3
+Found             at    at line:     4    word:     3
+Found            for    at line:     5    word:     4
+Found           with    at line:     6    word:     3
+Found           into    at line:     7    word:     3
+Found             to    at line:     8    word:     4
+Found            but    at line:     9    word:     1
+Found             of    at line:     9    word:     4
+Found             in    at line:    10    word:     5
+Found             in    at line:    11    word:     3
+Found           upon    at line:    12    word:     4
+Found             at    at line:    13    word:     4
+Found             in    at line:    14    word:     4
+Found             in    at line:    15    word:     3
+Found             at    at line:    16    word:     6
+Found             in    at line:    17    word:     5
+Found             by    at line:    18    word:     5
+Found             by    at line:    19    word:     2
+Found            for    at line:    20    word:     4
+Found             to    at line:    21    word:     3
+Found            for    at line:    22    word:     3
+Found          since    at line:    23    word:    11
+Found          since    at line:    24    word:     4
+Found          since    at line:    25    word:     6
+Found           than    at line:    26    word:     6
+Found           than    at line:    27    word:     4
+Found             on    at line:    28    word:     4
+Found             in    at line:    29    word:     3
+Found             on    at line:    30    word:     3
+Found             to    at line:    31    word:     4
+Found             at    at line:    32    word:     3
+Found           from    at line:    34    word:     4
+Found             in    at line:    35    word:     4
+Found           from    at line:    35    word:     5
+Found           from    at line:    36    word:     3
+Found             in    at line:    37    word:     5
+Found         inside    at line:    38    word:     3
+Found            for    at line:    39    word:     5
+Found             to    at line:    40    word:     5
+Found             at    at line:    41    word:     2
+Found             of    at line:    42    word:     5
+Found             of    at line:    43    word:     4
+Found          about    at line:    44    word:     2
+Found             to    at line:    45    word:     3
+Found             of    at line:    46    word:     4
+Found             to    at line:    47    word:     5
+Found             to    at line:    48    word:     3
+Found             to    at line:    49    word:     3
+Found           with    at line:    50    word:     3
+Found             by    at line:    51    word:     2
+Found             in    at line:    52    word:     2
+Found           onto    at line:    53    word:     2
+Found        beneath    at line:    54    word:     2
+Found           into    at line:    55    word:     2
+Found             at    at line:    56    word:     2
+Found          among    at line:    57    word:     2
+Found           away    at line:    58    word:     2
+Found             to    at line:    60    word:     2
+Found         amidst    at line:    62    word:     2
+Found          round    at line:    63    word:     2
+Found         beyond    at line:    64    word:     2
+Found           like    at line:    65    word:     2
+Found          minus    at line:    66    word:     2
+Found        nearest    at line:    67    word:     2
+Found        outside    at line:    68    word:     2
+Found          since    at line:    69    word:     2
+Found     throughout    at line:    70    word:     2
+Found         versus    at line:    71    word:     2
+
+                  prevented to come:           50	at line:   1    word:  4    preposition:              to    reference:  2596894150  ratio:         1.9253769e-08
+                               * to:   2596894150
+                          prevented:      8306414
+                               come:    893171729
+                            *** MIN:      8306414	FOUND RESULTS TO MIN:  6.01944473e-06
+
+                  prevented to come:           50	at line:   1    word:  5    preposition:            come    reference:    57051701  ratio:        8.76398059e-07
+                             * come:     57051701
+                          prevented:      8306414
+                                 to:   4025035527
+                            *** MIN:      8306414	FOUND RESULTS TO MIN:  6.01944473e-06
+
+                      loves with me:           19	at line:   2    word:  3    preposition:            with    reference:  2072360578  ratio:        9.16828867e-09
+                             * with:   2072360578
+                              loves:     51517742
+                                 me:   1998326590
+                            *** MIN:     51517742	FOUND RESULTS TO MIN:  3.68804984e-07
+
+         discussed about the matter:           32	at line:   3    word:  3    preposition:           about    reference:  1914918864  ratio:        1.67108908e-08
+                            * about:   1914918864
+                          discussed:     25967041
+                         the matter:     81308370
+                            *** MIN:     25967041	FOUND RESULTS TO MIN:   1.2323314e-06
+
+             reached at the airport:           80	at line:   4    word:  3    preposition:              at    reference:  1160735961  ratio:        6.89217899e-08
+                               * at:   1160735961
+                            reached:     36915274
+                        the airport:     34795265
+                            *** MIN:     34795265	FOUND RESULTS TO MIN:  2.29916341e-06
+
+                    ordered for his:          342	at line:   5    word:  4    preposition:             for    reference:  2091721500  ratio:         1.6350169e-07
+                              * for:   2091721500
+                            ordered:     80847170
+                                his:   4380345011
+                            *** MIN:     80847170	FOUND RESULTS TO MIN:  4.23020373e-06
+
+                   married with his:         2030	at line:   6    word:  3    preposition:            with    reference:  2072360578  ratio:        9.79559263e-07
+                             * with:   2072360578
+                            married:     52677894
+                                his:   4380345011
+                            *** MIN:     52677894	FOUND RESULTS TO MIN:  3.85360888e-05
+
+              entered into the room:          273	at line:   7    word:  3    preposition:            into    reference:   378020590  ratio:        7.22182884e-07
+                             * into:    378020590
+                            entered:     50062050
+                           the room:    236007791
+                            *** MIN:     50062050	FOUND RESULTS TO MIN:  5.45323254e-06
+
+                   resembles to its:          112	at line:   8    word:  4    preposition:              to    reference:  2596894150  ratio:        4.31284425e-08
+                               * to:   2596894150
+                          resembles:      6049913
+                                its:   2618369403
+                            *** MIN:      6049913	FOUND RESULTS TO MIN:  1.85126629e-05
+
+                       but he lacks:         7988	at line:   9    word:  1    preposition:             but    reference:   532934762  ratio:        1.49887014e-05
+                              * but:    532934762
+                                 he:   1828892832
+                              lacks:      9395596
+                            *** MIN:      9395596	FOUND RESULTS TO MIN:  0.000850185555
+
+                lacks of experience:           50	at line:   9    word:  4    preposition:              of    reference:  2447172203  ratio:        2.04317456e-08
+                               * of:   2447172203
+                              lacks:      9369977
+                         experience:   1113477545
+                            *** MIN:      9369977	FOUND RESULTS TO MIN:  5.33619239e-06
+
+                       time in your:      2354229	at line:  10    word:  5    preposition:              in    reference:  2774233348  ratio:        0.000848605256
+                               * in:   2774233348
+                               time:   3267051470
+                               your:   3071367148
+                            *** MIN:   2774233348	FOUND RESULTS TO MIN:  0.000848605256
+
+                  traveled in train:           28	at line:  11    word:  3    preposition:              in    reference:  2774233348  ratio:        1.00928785e-08
+                               * in:   2774233348
+                           traveled:     15079941
+                              train:    205175766
+                            *** MIN:     15079941	FOUND RESULTS TO MIN:  1.85677119e-06
+
+                      angry upon me:          164	at line:  12    word:  4    preposition:            upon    reference:     9258272  ratio:        1.77138887e-05
+                             * upon:      9258272
+                              angry:     82575332
+                                 me:   2026326877
+                            *** MIN:      9258272	FOUND RESULTS TO MIN:  1.77138887e-05
+
+                     pleased at you:            4	at line:  13    word:  4    preposition:              at    reference:  1160735961  ratio:        3.44608949e-09
+                               * at:   1160735961
+                            pleased:     47868724
+                                you:   3463665860
+                            *** MIN:     47868724	FOUND RESULTS TO MIN:  8.35618681e-08
+
+                  trembling in rage:          220	at line:  14    word:  4    preposition:              in    reference:  2774233348  ratio:        7.93011879e-08
+                               * in:   2774233348
+                          trembling:      3362120
+                               rage:     22334764
+                            *** MIN:      3362120	FOUND RESULTS TO MIN:  6.54349042e-05
+
+                    is in the phone:          232	at line:  15    word:  3    preposition:              in    reference:  2774233348  ratio:        8.36267072e-08
+                               * in:   2774233348
+                                 is:   3248561771
+                          the phone:    335451916
+                            *** MIN:    335451916	FOUND RESULTS TO MIN:  6.91604337e-07
+
+                         show at TV:          807	at line:  16    word:  6    preposition:              at    reference:  1160735961  ratio:        6.95248555e-07
+                               * at:   1160735961
+                               show:   3074184897
+                                 TV:   1292111924
+                            *** MIN:   1160735961	FOUND RESULTS TO MIN:  6.95248555e-07
+
+                      face in water:          444	at line:  17    word:  5    preposition:              in    reference:  2774233348  ratio:        1.60044216e-07
+                               * in:   2774233348
+                               face:    339231242
+                              water:    880336498
+                            *** MIN:    339231242	FOUND RESULTS TO MIN:  1.30884171e-06
+
+                  killed by a stone:         1180	at line:  18    word:  5    preposition:              by    reference:  2676344056  ratio:        4.40899965e-07
+                               * by:   2676344056
+                             killed:     62895427
+                            a stone:     10232077
+                            *** MIN:     10232077	FOUND RESULTS TO MIN:  0.000115323604
+
+                     school by foot:          558	at line:  19    word:  2    preposition:              by    reference:  2676344056  ratio:        2.08493373e-07
+                               * by:   2676344056
+                             school:   1273521366
+                               foot:    147423017
+                            *** MIN:    147423017	FOUND RESULTS TO MIN:  3.78502632e-06
+
+                        her for her:       132869	at line:  20    word:  4    preposition:             for    reference:  2091721500  ratio:        6.35213627e-05
+                              * for:   2091721500
+                                her:   1499078862
+                                her:   1499078862
+                            *** MIN:   1499078862	FOUND RESULTS TO MIN:  8.86337626e-05
+
+                    insisted to pay:          659	at line:  21    word:  3    preposition:              to    reference:  2596894150  ratio:        2.53764675e-07
+                               * to:   2596894150
+                           insisted:      3838693
+                                pay:    543346560
+                            *** MIN:      3838693	FOUND RESULTS TO MIN:  0.000171673015
+
+                      go for riding:          278	at line:  22    word:  3    preposition:             for    reference:  2091721500  ratio:        1.32904882e-07
+                              * for:   2091721500
+                                 go:   2807527034
+                             riding:    100557955
+                            *** MIN:    100557955	FOUND RESULTS TO MIN:  2.76457492e-06
+
+                 movie since a long:          148	at line:  23    word: 11    preposition:           since    reference:    17221143  ratio:        8.59408693e-06
+                            * since:     17221143
+                              movie:    273730585
+                             a long:    942853407
+                            *** MIN:     17221143	FOUND RESULTS TO MIN:  8.59408693e-06
+
+                      ill since two:          158	at line:  24    word:  4    preposition:           since    reference:    17221143  ratio:        9.17476848e-06
+                            * since:     17221143
+                                ill:     23924213
+                                two:   3149529034
+                            *** MIN:     17221143	FOUND RESULTS TO MIN:  9.17476848e-06
+
+                    storm since ten:           11	at line:  25    word:  6    preposition:           since    reference:    17221143  ratio:        6.38749704e-07
+                            * since:     17221143
+                              storm:    169739498
+                                ten:    188134734
+                            *** MIN:     17221143	FOUND RESULTS TO MIN:  6.38749704e-07
+
+               inferior than theirs:            9	at line:  26    word:  6    preposition:            than    reference:   685713042  ratio:        1.31250238e-08
+                             * than:    685713042
+                           inferior:      7632087
+                             theirs:      5786825
+                            *** MIN:      5786825	FOUND RESULTS TO MIN:  1.55525698e-06
+
+                     senior than me:          542	at line:  27    word:  4    preposition:            than    reference:   685713042  ratio:          7.904181e-07
+                             * than:    685713042
+                             senior:    215093297
+                                 me:   1998326590
+                            *** MIN:    215093297	FOUND RESULTS TO MIN:  2.51983678e-06
+
+                       letter on my:         4093	at line:  28    word:  4    preposition:              on    reference:  2123182273  ratio:        1.92776666e-06
+                               * on:   2123182273
+                             letter:    303308398
+                                 my:   2300097219
+                            *** MIN:    303308398	FOUND RESULTS TO MIN:  1.34945159e-05
+
+                 goes in the school:            3	at line:  29    word:  3    preposition:              in    reference:  2774233348  ratio:        1.08137983e-09
+                               * in:   2774233348
+                               goes:    149430473
+                         the school:    284126357
+                            *** MIN:    149430473	FOUND RESULTS TO MIN:  2.00762264e-08
+
+                        goes on his:         2111	at line:  30    word:  3    preposition:              on    reference:  2123182273  ratio:        9.94262258e-07
+                               * on:   2123182273
+                               goes:    149051674
+                                his:   4380345011
+                            *** MIN:    149051674	FOUND RESULTS TO MIN:  1.41628735e-05
+
+                      going to home:          574	at line:  31    word:  4    preposition:              to    reference:  2596894150  ratio:        2.21033268e-07
+                               * to:   2596894150
+                              going:    532130867
+                               home:   6571172564
+                            *** MIN:    532130867	FOUND RESULTS TO MIN:  1.07868202e-06
+
+                      going at home:          213	at line:  32    word:  3    preposition:              at    reference:  1160735961  ratio:        1.83504266e-07
+                               * at:   1160735961
+                              going:    532130867
+                               home:   6361334327
+                            *** MIN:    532130867	FOUND RESULTS TO MIN:  4.00277475e-07
+
+                rises from the East:          534	at line:  34    word:  4    preposition:            from    reference:  1658050715  ratio:        3.22064938e-07
+                             * from:   1658050715
+                              rises:     34222567
+                           the East:    160034557
+                            *** MIN:     34222567	FOUND RESULTS TO MIN:  1.56037389e-05
+
+                        got in from:          546	at line:  35    word:  4    preposition:              in    reference:  2774233348  ratio:         1.9681113e-07
+                               * in:   2774233348
+                                got:    489930606
+                               from:   2433535627
+                            *** MIN:    489930606	FOUND RESULTS TO MIN:  1.11444354e-06
+
+                 in from the window:          184	at line:  35    word:  5    preposition:            from    reference:  1658050715  ratio:        1.10973686e-07
+                             * from:   1658050715
+                                 in:   5174904681
+                         the window:    103797015
+                            *** MIN:    103797015	FOUND RESULTS TO MIN:  1.77269067e-06
+
+                    begin from page:           33	at line:  36    word:  3    preposition:            from    reference:  1658050715  ratio:        1.99028894e-08
+                             * from:   1658050715
+                              begin:    154532204
+                               page:   6207461279
+                            *** MIN:    154532204	FOUND RESULTS TO MIN:  2.13547721e-07
+
+                        limit in my:          573	at line:  37    word:  5    preposition:              in    reference:  2774233348  ratio:        2.06543548e-07
+                               * in:   2774233348
+                              limit:    134288513
+                                 my:   2331057623
+                            *** MIN:    134288513	FOUND RESULTS TO MIN:  4.26693235e-06
+
+              wait inside the white:            4	at line:  38    word:  3    preposition:          inside    reference:    41270061  ratio:        9.69225609e-08
+                           * inside:     41270061
+                               wait:    179236456
+                          the white:    226007313
+                            *** MIN:     41270061	FOUND RESULTS TO MIN:  9.69225609e-08
+
+                   insured for fire:          917	at line:  39    word:  5    preposition:             for    reference:  2091721500  ratio:        4.38394882e-07
+                              * for:   2091721500
+                            insured:     11645165
+                               fire:    423034654
+                            *** MIN:     11645165	FOUND RESULTS TO MIN:  7.87451273e-05
+
+                      house to live:         2403	at line:  40    word:  5    preposition:              to    reference:  2596894150  ratio:        9.25336137e-07
+                               * to:   2596894150
+                              house:   1096318529
+                               live:   1504545968
+                            *** MIN:   1096318529	FOUND RESULTS TO MIN:  2.19188122e-06
+
+                 Look at the mirror:         9460	at line:  41    word:  2    preposition:              at    reference:  1160735961  ratio:        8.15000165e-06
+                               * at:   1160735961
+                               Look:   1040367053
+                         the mirror:     25175097
+                            *** MIN:     25175097	FOUND RESULTS TO MIN:  0.000375768165
+
+                          key of my:         1760	at line:  42    word:  5    preposition:              of    reference:  2447172203  ratio:        7.19197447e-07
+                               * of:   2447172203
+                                key:    605917658
+                                 my:   2300893994
+                            *** MIN:    605917658	FOUND RESULTS TO MIN:  2.90468511e-06
+
+                  course of English:        50404	at line:  43    word:  4    preposition:              of    reference:  2447172203  ratio:        2.05968341e-05
+                               * of:   2447172203
+                             course:    837928611
+                            English:   3482496691
+                            *** MIN:    837928611	FOUND RESULTS TO MIN:  6.01530958e-05
+
+                  It's about eleven:            2	at line:  44    word:  2    preposition:           about    reference:  1914918864  ratio:        1.04443067e-09
+                            * about:   1914918864
+                               It's:   2089929935
+                             eleven:     19136066
+                            *** MIN:     19136066	FOUND RESULTS TO MIN:   1.0451469e-07
+
+                  resembles to that:          600	at line:  45    word:  3    preposition:              to    reference:  2596894150  ratio:        2.31045228e-07
+                               * to:   2596894150
+                          resembles:      6079620
+                               that:   1627743181
+                            *** MIN:      6079620	FOUND RESULTS TO MIN:  9.86903787e-05
+
+                      lacks of tact:           17	at line:  46    word:  4    preposition:              of    reference:  2447172203  ratio:        6.94679352e-09
+                               * of:   2447172203
+                              lacks:      9395596
+                               tact:      5599368
+                            *** MIN:      5599368	FOUND RESULTS TO MIN:  3.03605693e-06
+
+            approaching to Victoria:            3	at line:  47    word:  5    preposition:              to    reference:  2596894150  ratio:        1.15522614e-09
+                               * to:   2596894150
+                        approaching:     21713855
+                           Victoria:    330886909
+                            *** MIN:     21713855	FOUND RESULTS TO MIN:  1.38160635e-07
+
+               reached to Singapore:            6	at line:  48    word:  3    preposition:              to    reference:  2596894150  ratio:        2.31045228e-09
+                               * to:   2596894150
+                            reached:     37395608
+                          Singapore:    243606491
+                            *** MIN:     37395608	FOUND RESULTS TO MIN:  1.60446649e-07
+
+                     married to her:       119017	at line:  49    word:  3    preposition:              to    reference:  2596894150  ratio:        4.58305164e-05
+                               * to:   2596894150
+                            married:     52036812
+                                her:   1499007600
+                            *** MIN:     52036812	FOUND RESULTS TO MIN:   0.00228716932
+
+                   married with her:         1793	at line:  50    word:  3    preposition:            with    reference:  2072360578  ratio:        8.65196925e-07
+                             * with:   2072360578
+                            married:     52654116
+                                her:   1499007600
+                            *** MIN:     52654116	FOUND RESULTS TO MIN:  3.40524186e-05
+
+              fluttered by the open:            3	at line:  51    word:  2    preposition:              by    reference:  2676344056  ratio:        1.12093211e-09
+                               * by:   2676344056
+                          fluttered:       332168
+                           the open:    242458679
+                            *** MIN:       332168	FOUND RESULTS TO MIN:  9.03157438e-06
+
+              fluttered in the open:           12	at line:  52    word:  2    preposition:              in    reference:  2774233348  ratio:        4.32551934e-09
+                               * in:   2774233348
+                          fluttered:       328951
+                           the open:    242463079
+                            *** MIN:       328951	FOUND RESULTS TO MIN:  3.64795973e-05
+
+            fluttered onto the open:            0	at line:  53    word:  2    preposition:            onto    reference:     2513900  ratio:                     0
+                             * onto:      2513900
+                          fluttered:       328951
+                           the open:    242463079
+                            *** MIN:       328951	FOUND RESULTS TO MIN:               0
+
+         fluttered beneath the open:            0	at line:  54    word:  2    preposition:         beneath    reference:     2372448  ratio:                     0
+                          * beneath:      2372448
+                          fluttered:       332168
+                           the open:    242458679
+                            *** MIN:       332168	FOUND RESULTS TO MIN:               0
+
+            fluttered into the open:           14	at line:  55    word:  2    preposition:            into    reference:   378020590  ratio:        3.70350197e-08
+                             * into:    378020590
+                          fluttered:       329014
+                           the open:    242458679
+                            *** MIN:       329014	FOUND RESULTS TO MIN:  4.25513808e-05
+
+              fluttered at the open:            6	at line:  56    word:  2    preposition:              at    reference:  1160735961  ratio:        5.16913424e-09
+                               * at:   1160735961
+                          fluttered:       332168
+                           the open:    242463079
+                            *** MIN:       332168	FOUND RESULTS TO MIN:  1.80631488e-05
+
+           fluttered among the open:            0	at line:  57    word:  2    preposition:           among    reference:    10621383  ratio:                     0
+                            * among:     10621383
+                          fluttered:       332168
+                           the open:    242458679
+                            *** MIN:       332168	FOUND RESULTS TO MIN:               0
+
+            fluttered away the open:            0	at line:  58    word:  2    preposition:            away    reference:    36694085  ratio:                     0
+                             * away:     36694085
+                          fluttered:       329014
+                           the open:    233936776
+                            *** MIN:       329014	FOUND RESULTS TO MIN:               0
+
+              fluttered to the open:            1	at line:  60    word:  2    preposition:              to    reference:  2596894150  ratio:        3.85075379e-10
+                               * to:   2596894150
+                          fluttered:       329014
+                           the open:    242463079
+                            *** MIN:       329014	FOUND RESULTS TO MIN:  3.03938434e-06
+
+          fluttered amidst the open:            0	at line:  62    word:  2    preposition:          amidst    reference:     2189453  ratio:                     0
+                           * amidst:      2189453
+                          fluttered:       329014
+                           the open:    242458679
+                            *** MIN:       329014	FOUND RESULTS TO MIN:               0
+
+           fluttered round the open:            2	at line:  63    word:  2    preposition:           round    reference:    32597483  ratio:        6.13544303e-08
+                            * round:     32597483
+                          fluttered:       329014
+                           the open:    233936776
+                            *** MIN:       329014	FOUND RESULTS TO MIN:  6.07876868e-06
+
+          fluttered beyond the open:            0	at line:  64    word:  2    preposition:          beyond    reference:    24205827  ratio:                     0
+                           * beyond:     24205827
+                          fluttered:       329014
+                           the open:    242458679
+                            *** MIN:       329014	FOUND RESULTS TO MIN:               0
+
+            fluttered like the open:            0	at line:  65    word:  2    preposition:            like    reference:  1311082070  ratio:                     0
+                             * like:   1311082070
+                          fluttered:       332168
+                           the open:    233936776
+                            *** MIN:       332168	FOUND RESULTS TO MIN:               0
+
+           fluttered minus the open:            0	at line:  66    word:  2    preposition:           minus    reference:     3101777  ratio:                     0
+                            * minus:      3101777
+                          fluttered:       332168
+                           the open:    233936776
+                            *** MIN:       332168	FOUND RESULTS TO MIN:               0
+
+         fluttered nearest the open:            0	at line:  67    word:  2    preposition:         nearest    reference:     2419645  ratio:                     0
+                          * nearest:      2419645
+                          fluttered:       328951
+                           the open:    233936776
+                            *** MIN:       328951	FOUND RESULTS TO MIN:               0
+
+         fluttered outside the open:            2	at line:  68    word:  2    preposition:         outside    reference:    11418027  ratio:        1.75161611e-07
+                          * outside:     11418027
+                          fluttered:       332168
+                           the open:    233936776
+                            *** MIN:       332168	FOUND RESULTS TO MIN:  6.02104959e-06
+
+           fluttered since the open:            0	at line:  69    word:  2    preposition:           since    reference:    17221143  ratio:                     0
+                            * since:     17221143
+                          fluttered:       329014
+                           the open:    233936776
+                            *** MIN:       329014	FOUND RESULTS TO MIN:               0
+
+      fluttered throughout the open:            0	at line:  70    word:  2    preposition:      throughout    reference:     2428992  ratio:                     0
+                       * throughout:      2428992
+                          fluttered:       329014
+                           the open:    233936776
+                            *** MIN:       329014	FOUND RESULTS TO MIN:               0
+
+          fluttered versus the open:            0	at line:  71    word:  2    preposition:          versus    reference:     7707072  ratio:                     0
+                           * versus:      7707072
+                          fluttered:       329014
+                           the open:    233936776
+                            *** MIN:       329014	FOUND RESULTS TO MIN:               0
+
+
+AVERAGE FOUND RESULTS TO MIN RATIO: 7.59978837e-05
+
+runtime = 1275.28
+0

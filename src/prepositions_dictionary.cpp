@@ -5,10 +5,10 @@
 
 prepositions_dictionary::prepositions_dictionary(std::string const& lang)
 {
-    for (auto i : dictionary_)
-    {
-        std::cout << i.first << ' ' << i.second << std::endl;
-    }
+//    for (auto i : dictionary_)
+//    {
+//        std::cout << i.first << ' ' << i.second << std::endl;
+//    }
 
     std::ifstream prepositions_list;
     prepositions_list.exceptions(std::ifstream::failbit | std::ifstream::badbit);

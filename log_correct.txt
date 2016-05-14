@@ -1,0 +1,229 @@
+LOG:
+----------------------------------------------------------------------------------------------------------
+On the whole, Harry thought he was to be congratulated on his idea of hiding here.
+He was not, perhaps, very comfortable lying on the hot, hard earth but, on the other hand,
+nobody was glaring at him, grinding their teeth so loudly that he could not hear the news, or shooting nasty questions at him,
+as had happened every time he had tried sitting down in the living room to watch television with his aunt and uncle.
+Almost as though this thought had fluttered through the open window, Vernon Dursley, Harry's uncle, suddenly spoke.
+'Glad to see the boy's stopped trying to butt in. Where is he, anyway?'
+'I don't know,' said Aunt Petunia, unconcerned. 'Not in the house.'
+Uncle Vernon grunted.
+As far as I remember, I used to be a jedi a long time ago in a galaxy far far away.
+Feeling all the love I swear that it’s in the air, Leaving me, floating forever, into infinity.
+Quantum fluctuations project into the air, Leaving me floating forever into infinity.
+
+Prepositions:
+Found             on    at line:     1    word:     1
+Found             to    at line:     1    word:     8
+Found             on    at line:     1    word:    11
+Found             of    at line:     1    word:    14
+Found             on    at line:     2    word:     8
+Found            but    at line:     2    word:    13
+Found             on    at line:     2    word:    14
+Found             at    at line:     3    word:     4
+Found             or    at line:     3    word:    18
+Found             at    at line:     3    word:    22
+Found             as    at line:     4    word:     1
+Found           down    at line:     4    word:    10
+Found             in    at line:     4    word:    11
+Found             to    at line:     4    word:    15
+Found           with    at line:     4    word:    18
+Found             as    at line:     5    word:     2
+Found        through    at line:     5    word:     8
+Found             to    at line:     6    word:     2
+Found             to    at line:     6    word:     8
+Found             in    at line:     6    word:    10
+Found             in    at line:     7    word:     9
+Found      as far as    at line:     9    word:     1
+Found             to    at line:     9    word:     8
+Found            ago    at line:     9    word:    15
+Found             in    at line:     9    word:    16
+Found           away    at line:     9    word:    21
+Found             in    at line:    10    word:     9
+Found           into    at line:    10    word:    16
+Found           into    at line:    11    word:     4
+Found           into    at line:    11    word:    11
+
+                       On the whole:     12479295	at line:   1    word:  1    preposition:              on    reference:  2123182273  ratio:         0.00587763715
+                               * on:   2123182273
+                          the whole:    744530215
+                            *** MIN:    744530215	FOUND RESULTS TO MIN:     0.016761301
+
+                          was to be:     25322693	at line:   1    word:  8    preposition:              to    reference:  2596894150  ratio:         0.00975114561
+                               * to:   2596894150
+                                was:   1266216993
+                                 be:   2157250833
+                            *** MIN:   1266216993	FOUND RESULTS TO MIN:    0.0199986994
+
+               congratulated on his:         8116	at line:   1    word: 11    preposition:              on    reference:  2123182273  ratio:        3.82256394e-06
+                               * on:   2123182273
+                      congratulated:      1449808
+                                his:   4461161266
+                            *** MIN:      1449808	FOUND RESULTS TO MIN:   0.00559798263
+
+                     idea of hiding:          948	at line:   1    word: 14    preposition:              of    reference:  2447172203  ratio:        3.87385897e-07
+                               * of:   2447172203
+                               idea:    190455651
+                             hiding:     27044893
+                            *** MIN:     27044893	FOUND RESULTS TO MIN:  3.50528286e-05
+
+                   lying on the hot:          188	at line:   2    word:  8    preposition:              on    reference:  2123182273  ratio:        8.85463309e-08
+                               * on:   2123182273
+                              lying:     31964378
+                            the hot:     65936129
+                            *** MIN:     31964378	FOUND RESULTS TO MIN:  5.88154726e-06
+
+                     hard earth but:          154	at line:   2    word: 13    preposition:             but    reference:   532934762  ratio:         2.8896595e-07
+                              * but:    532934762
+                               hard:    512490508
+                              earth:    258862336
+                            *** MIN:    258862336	FOUND RESULTS TO MIN:  5.94910802e-07
+
+                  on the other hand:    238014301	at line:   2    word: 14    preposition:              on    reference:  2123182273  ratio:           0.112102623
+                               * on:   2123182273
+                          the other:   1957746503
+                               hand:    431854179
+                            *** MIN:    431854179	FOUND RESULTS TO MIN:     0.551145068
+
+                     glaring at him:        24966	at line:   3    word:  4    preposition:              at    reference:  1160735961  ratio:        2.15087676e-05
+                               * at:   1160735961
+                            glaring:      4496685
+                                him:    269161649
+                            *** MIN:      4496685	FOUND RESULTS TO MIN:   0.00555209004
+
+                  or shooting nasty:          173	at line:   3    word: 18    preposition:              or    reference:  1932509765  ratio:        8.95208931e-08
+                               * or:   1932509765
+                           shooting:    111716507
+                              nasty:     21606351
+                            *** MIN:     21606351	FOUND RESULTS TO MIN:  8.00690501e-06
+
+                   questions at him:          462	at line:   3    word: 22    preposition:              at    reference:  1160735961  ratio:        3.98023337e-07
+                               * at:   1160735961
+                          questions:   1637050440
+                                him:    269161649
+                            *** MIN:    269161649	FOUND RESULTS TO MIN:  1.71644067e-06
+
+                    as had happened:         2108	at line:   4    word:  1    preposition:              as    reference:   900533570  ratio:        2.34083445e-06
+                               * as:    900533570
+                                had:   2709702551
+                           happened:     95641467
+                            *** MIN:     95641467	FOUND RESULTS TO MIN:   2.2040649e-05
+
+                    sitting down in:        50251	at line:   4    word: 10    preposition:            down    reference:   143408277  ratio:        0.000350405158
+                             * down:    143408277
+                            sitting:     58943028
+                                 in:   5234014836
+                            *** MIN:     58943028	FOUND RESULTS TO MIN:  0.000852535095
+
+                 down in the living:          304	at line:   4    word: 11    preposition:              in    reference:  2774233348  ratio:        1.09579823e-07
+                               * in:   2774233348
+                               down:   2320395751
+                         the living:    124565105
+                            *** MIN:    124565105	FOUND RESULTS TO MIN:  2.44049086e-06
+
+                      room to watch:        11983	at line:   4    word: 15    preposition:              to    reference:  2596894150  ratio:        4.61435827e-06
+                               * to:   2596894150
+                               room:   1323594712
+                              watch:    984741383
+                            *** MIN:    984741383	FOUND RESULTS TO MIN:  1.21686772e-05
+
+                television with his:         2636	at line:   4    word: 18    preposition:            with    reference:  2072360578  ratio:        1.27197942e-06
+                             * with:   2072360578
+                         television:    111801221
+                                his:   4380345033
+                            *** MIN:    111801221	FOUND RESULTS TO MIN:    2.357756e-05
+
+                   Almost as though:        45147	at line:   5    word:  2    preposition:              as    reference:   900533570  ratio:        5.01336113e-05
+                               * as:    900533570
+                             Almost:    137084630
+                             though:    133898059
+                            *** MIN:    133898059	FOUND RESULTS TO MIN:  0.000337174417
+
+         fluttered through the open:          172	at line:   5    word:  8    preposition:         through    reference:    87348455  ratio:         1.9691247e-06
+                          * through:     87348455
+                          fluttered:       329014
+                           the open:    242458677
+                            *** MIN:       329014	FOUND RESULTS TO MIN:  0.000522774107
+
+                        Glad to see:      6699935	at line:   6    word:  2    preposition:              to    reference:  2596894150  ratio:         0.00257998001
+                               * to:   2596894150
+                               Glad:     26481247
+                                see:  11596829135
+                            *** MIN:     26481247	FOUND RESULTS TO MIN:     0.253006779
+
+                     trying to butt:          913	at line:   6    word:  8    preposition:              to    reference:  2596894150  ratio:        3.51573821e-07
+                               * to:   2596894150
+                             trying:    119773052
+                               butt:     43917316
+                            *** MIN:     43917316	FOUND RESULTS TO MIN:  2.07890664e-05
+
+                         to butt in:        15348	at line:   6    word: 10    preposition:              in    reference:  2774233348  ratio:        5.53233924e-06
+                               * in:   2774233348
+                                 to:   3946242667
+                               butt:     43917316
+                            *** MIN:     43917316	FOUND RESULTS TO MIN:  0.000349474909
+
+                   Not in the house:          783	at line:   7    word:  9    preposition:              in    reference:  2774233348  ratio:        2.82240137e-07
+                               * in:   2774233348
+                                Not:   2030163193
+                          the house:    502417632
+                            *** MIN:    502417632	FOUND RESULTS TO MIN:  1.55846441e-06
+
+               As far as I remember:        76878	at line:   9    word:  1    preposition:       as far as    reference:     5543857  ratio:          0.0138672408
+                        * as far as:      5543857
+                                  I:   8218606123
+                           remember:    103869997
+                            *** MIN:      5543857	FOUND RESULTS TO MIN:    0.0138672408
+
+                         used to be:    116451659	at line:   9    word:  8    preposition:              to    reference:  2596894150  ratio:          0.0448426668
+                               * to:   2596894150
+                               used:   1953559863
+                                 be:   2158420382
+                            *** MIN:   1953559863	FOUND RESULTS TO MIN:    0.0596099773
+
+                        time ago in:       157219	at line:   9    word: 15    preposition:             ago    reference:    52731001  ratio:         0.00298152884
+                              * ago:     52731001
+                               time:   3267051384
+                                 in:   5248386671
+                            *** MIN:     52731001	FOUND RESULTS TO MIN:   0.00298152884
+
+                    ago in a galaxy:       110284	at line:   9    word: 16    preposition:              in    reference:  2774233348  ratio:        3.97529646e-05
+                               * in:   2774233348
+                                ago:    826663223
+                           a galaxy:      2611043
+                            *** MIN:      2611043	FOUND RESULTS TO MIN:    0.0422375273
+
+                       far far away:      1220318	at line:   9    word: 21    preposition:            away    reference:    36694085  ratio:          0.0332565317
+                             * away:     36694085
+                                far:    261594142
+                                far:    259679574
+                            *** MIN:     36694085	FOUND RESULTS TO MIN:    0.0332565317
+
+                  it’s in the air:         3071	at line:  10    word:  9    preposition:              in    reference:  2774233348  ratio:        1.10697249e-06
+                               * in:   2774233348
+                             it’s:   2090832211
+                            the air:    289345400
+                            *** MIN:    289345400	FOUND RESULTS TO MIN:  1.06136127e-05
+
+                      into infinity:       240217	at line:  10    word: 16    preposition:            into    reference:   378020590  ratio:        0.000635460095
+                             * into:    378020590
+                           infinity:     27773554
+                            *** MIN:     27773554	FOUND RESULTS TO MIN:   0.00864912715
+
+               project into the air:         1770	at line:  11    word:  4    preposition:            into    reference:   378020590  ratio:        4.68228463e-06
+                             * into:    378020590
+                            project:   1356453413
+                            the air:    289343450
+                            *** MIN:    289343450	FOUND RESULTS TO MIN:  6.11729763e-06
+
+              forever into infinity:          406	at line:  11    word: 11    preposition:            into    reference:   378020590  ratio:        1.07401557e-06
+                             * into:    378020590
+                            forever:     89067717
+                           infinity:     28586899
+                            *** MIN:     28586899	FOUND RESULTS TO MIN:  1.42023099e-05
+
+
+AVERAGE FOUND RESULTS TO MIN RATIO: 0.0338296857
+
+runtime = 580.188
+0
