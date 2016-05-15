@@ -1,0 +1,12 @@
+*.[oa]
+*.out
+*.save
+*~
+#exec
+bin/
+backup/
+src/CMakeLists.txt
+src/.idea
+google_test/
+Ya vs G.xls
+xml_resp.xml
