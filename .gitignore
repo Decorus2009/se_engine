@@ -7,7 +7,7 @@ src_exe
 bin/
 backup/
 src/CMakeLists.txt
-src/.idea
+src/.idea/
 google_test/
 Ya vs G.xls
 xml_resp.xml
