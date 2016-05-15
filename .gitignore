@@ -3,6 +3,7 @@
 *.save
 *~
 exe
+src_exe
 bin/
 backup/
 src/CMakeLists.txt
