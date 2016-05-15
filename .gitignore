@@ -2,7 +2,7 @@
 *.out
 *.save
 *~
-#exe
+exe
 bin/
 backup/
 src/CMakeLists.txt
