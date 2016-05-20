@@ -353,7 +353,7 @@
 //
 //    double sum = 0;
 //
-//    if (log_mode == "DEBUG")
+//    if (log_mode == "--debug")
 //    {
 //        log << text_.str() << (wstring)"\n";
 //

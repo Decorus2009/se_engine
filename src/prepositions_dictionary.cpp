@@ -3,30 +3,14 @@
 #include <string>
 #include "prepositions_dictionary.hpp"
 
-prepositions_dictionary::prepositions_dictionary(std::string const& lang)
+prepositions_dictionary::prepositions_dictionary()
 {
-//    for (auto i : dictionary_)
-//    {
-//        std::cout << i.first << ' ' << i.second << std::endl;
-//    }
-
     std::ifstream prepositions_list;
     prepositions_list.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     try
     {
-        if (lang == "-en")
-        {
-            //prepositions_list.open("/home/decorus/Dropbox/CSC/Practice/I/se_engine/en_prepositions_stat.txt");
-            prepositions_list.open("en_prepositions_stat.txt");
-        }
-        else if (lang == "-ru")
-        {
-            //prepositions_list.open("/home/decorus/Dropbox/CSC/Practice/I/se_engine/ru_prepositions_list.txt");
-            prepositions_list.open("ru_prepositions_list.txt");
-        }
+        prepositions_list.open("en_prepositions_stat.txt");
     }
-
-
     // тут и так летит наверх, не надо throw;
     catch (std::ifstream::failure e)
     {
@@ -48,9 +32,4 @@ prepositions_dictionary::prepositions_dictionary(std::string const& lang)
         getline(prepositions_list, frequency);
         dictionary_.insert(make_pair(preposition, std::stoull(frequency)));
     }
-}
-
-bool prepositions_dictionary::find(std::string const& word) const
-{
-    return dictionary_.find(word) != dictionary_.end();
 }

@@ -19,7 +19,8 @@ long long yandex_requester::send_request(std::string const &req_str)
 
     // если вернулся xml, в котором нет найденных результатов вообще, только сообщение об ошибке
     // вернуть 0 найденных документов
-    if (xml.find("Sorry, there are no results for this search") != string::npos)
+    if (xml.find("Sorry, there are no results for this search") != string::npos ||
+        xml.find("Request limit reached") != string::npos)
     {
         return 0;
     }

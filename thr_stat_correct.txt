@@ -1,0 +1,519 @@
+CORRECT
+
+FIXED
+-------------------------------------------------
+Average by all texts:
+POSS MIST NUM TO FULL REQS NUM      20.2%
+REMAINING                           79.8%
+
+
+
+texts/correct/tiny1.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          17
+TOTAL: POSS MIST NUM:                           0
+RATIO: POSS MIST NUM TO FULL REQS NUM:       0.0%
+RATIO: REMAINING                           100.0%
+
+texts/correct/tiny2.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          21
+TOTAL: POSS MIST NUM:                           6
+RATIO: POSS MIST NUM TO FULL REQS NUM:      28.6%
+RATIO: REMAINING                            71.4%
+
+texts/correct/tiny3.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          15
+TOTAL: POSS MIST NUM:                           4
+RATIO: POSS MIST NUM TO FULL REQS NUM:      26.7%
+RATIO: REMAINING                            73.3%
+
+texts/correct/tiny4.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          30
+TOTAL: POSS MIST NUM:                           6
+RATIO: POSS MIST NUM TO FULL REQS NUM:      20.0%
+RATIO: REMAINING                            80.0%
+
+texts/correct/tiny5.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          17
+TOTAL: POSS MIST NUM:                           7
+RATIO: POSS MIST NUM TO FULL REQS NUM:      41.2%
+RATIO: REMAINING                            58.8%
+
+texts/correct/tiny6.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          38
+TOTAL: POSS MIST NUM:                           4
+RATIO: POSS MIST NUM TO FULL REQS NUM:      10.5%
+RATIO: REMAINING                            89.5%
+
+texts/correct/tiny7.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          31
+TOTAL: POSS MIST NUM:                           7
+RATIO: POSS MIST NUM TO FULL REQS NUM:      22.6%
+RATIO: REMAINING                            77.4%
+
+texts/correct/tiny8.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          12
+TOTAL: POSS MIST NUM:                           3
+RATIO: POSS MIST NUM TO FULL REQS NUM:      25.0%
+RATIO: REMAINING                            75.0%
+
+texts/correct/tiny9.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          24
+TOTAL: POSS MIST NUM:                           5
+RATIO: POSS MIST NUM TO FULL REQS NUM:      20.8%
+RATIO: REMAINING                            79.2%
+
+texts/correct/tiny10.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          43
+TOTAL: POSS MIST NUM:                           8
+RATIO: POSS MIST NUM TO FULL REQS NUM:      18.6%
+RATIO: REMAINING                            81.4%
+
+texts/correct/tiny11.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          19
+TOTAL: POSS MIST NUM:                           6
+RATIO: POSS MIST NUM TO FULL REQS NUM:      31.6%
+RATIO: REMAINING                            68.4%
+
+texts/correct/tiny12.txt
+AVERAGE: FOUND TO MIN:                        -nan
+TOTAL: FULL REQS NUM:                          13
+TOTAL: POSS MIST NUM:                           3
+RATIO: POSS MIST NUM TO FULL REQS NUM:      23.1%
+RATIO: REMAINING                            76.9%
+
+texts/correct/mid1.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          57
+TOTAL: POSS MIST NUM:                          13
+RATIO: POSS MIST NUM TO FULL REQS NUM:      22.8%
+RATIO: REMAINING                            77.2%
+
+texts/correct/mid2.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                         153
+TOTAL: POSS MIST NUM:                          35
+RATIO: POSS MIST NUM TO FULL REQS NUM:      22.9%
+RATIO: REMAINING                            77.1%
+
+texts/correct/small_text_correct.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                          30
+TOTAL: POSS MIST NUM:                           0
+RATIO: POSS MIST NUM TO FULL REQS NUM:       0.0%
+RATIO: REMAINING                           100.0%
+
+texts/correct/test_text_HPOP.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                         102
+TOTAL: POSS MIST NUM:                           9
+RATIO: POSS MIST NUM TO FULL REQS NUM:       8.8%
+RATIO: REMAINING                            91.2%
+
+texts/correct/large1.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                         696
+TOTAL: POSS MIST NUM:                         141
+RATIO: POSS MIST NUM TO FULL REQS NUM:      20.3%
+RATIO: REMAINING                            79.7%
+
+
+FIXED CONTEXT DEPENDENT
+-------------------------------------------------
+
+// порог для контекстно-зависимых запросов 10^-5
+Average by all texts:
+AVERAGE: FOUND TO MIN:          2.71E-002
+POSS MIST NUM TO FULL REQS NUM      30.4%
+REMAINING                           69.6%
+
+
+
+texts/correct/tiny1.txt
+AVERAGE: FOUND TO MIN:                  1.530e-01
+TOTAL: FULL REQS NUM:                          17
+TOTAL: POSS MIST NUM:                           5
+RATIO: POSS MIST NUM TO FULL REQS NUM:      29.4%
+RATIO: REMAINING                            70.6%
+
+texts/correct/tiny2.txt
+AVERAGE: FOUND TO MIN:                  2.425e-03
+TOTAL: FULL REQS NUM:                          21
+TOTAL: POSS MIST NUM:                           8
+RATIO: POSS MIST NUM TO FULL REQS NUM:      38.1%
+RATIO: REMAINING                            61.9%
+
+texts/correct/tiny3.txt
+AVERAGE: FOUND TO MIN:                  1.051e-02
+TOTAL: FULL REQS NUM:                          15
+TOTAL: POSS MIST NUM:                           4
+RATIO: POSS MIST NUM TO FULL REQS NUM:      26.7%
+RATIO: REMAINING                            73.3%
+
+texts/correct/tiny4.txt
+AVERAGE: FOUND TO MIN:                  5.875e-03
+TOTAL: FULL REQS NUM:                          30
+TOTAL: POSS MIST NUM:                          10
+RATIO: POSS MIST NUM TO FULL REQS NUM:      33.3%
+RATIO: REMAINING                            66.7%
+
+texts/correct/tiny5.txt
+AVERAGE: FOUND TO MIN:                  2.234e-02
+TOTAL: FULL REQS NUM:                          17
+TOTAL: POSS MIST NUM:                           3
+RATIO: POSS MIST NUM TO FULL REQS NUM:      17.6%
+RATIO: REMAINING                            82.4%
+
+texts/correct/tiny6.txt
+AVERAGE: FOUND TO MIN:                  1.153e-02
+TOTAL: FULL REQS NUM:                          38
+TOTAL: POSS MIST NUM:                          13
+RATIO: POSS MIST NUM TO FULL REQS NUM:      34.2%
+RATIO: REMAINING                            65.8%
+
+texts/correct/tiny7.txt
+AVERAGE: FOUND TO MIN:                  3.022e-02
+TOTAL: FULL REQS NUM:                          31
+TOTAL: POSS MIST NUM:                          14
+RATIO: POSS MIST NUM TO FULL REQS NUM:      45.2%
+RATIO: REMAINING                            54.8%
+
+texts/correct/tiny8.txt
+AVERAGE: FOUND TO MIN:                  1.403e-02
+TOTAL: FULL REQS NUM:                          12
+TOTAL: POSS MIST NUM:                           3
+RATIO: POSS MIST NUM TO FULL REQS NUM:      25.0%
+RATIO: REMAINING                            75.0%
+
+texts/correct/tiny9.txt
+AVERAGE: FOUND TO MIN:                  3.015e-03
+TOTAL: FULL REQS NUM:                          24
+TOTAL: POSS MIST NUM:                           9
+RATIO: POSS MIST NUM TO FULL REQS NUM:      37.5%
+RATIO: REMAINING                            62.5%
+
+texts/correct/tiny10.txt
+AVERAGE: FOUND TO MIN:                  9.750e-04
+TOTAL: FULL REQS NUM:                          43
+TOTAL: POSS MIST NUM:                          12
+RATIO: POSS MIST NUM TO FULL REQS NUM:      27.9%
+RATIO: REMAINING                            72.1%
+
+texts/correct/tiny11.txt
+AVERAGE: FOUND TO MIN:                  3.227e-04
+TOTAL: FULL REQS NUM:                          19
+TOTAL: POSS MIST NUM:                           6
+RATIO: POSS MIST NUM TO FULL REQS NUM:      31.6%
+RATIO: REMAINING                            68.4%
+
+texts/correct/tiny12.txt
+AVERAGE: FOUND TO MIN:                  4.303e-03
+TOTAL: FULL REQS NUM:                          13
+TOTAL: POSS MIST NUM:                           5
+RATIO: POSS MIST NUM TO FULL REQS NUM:      38.5%
+RATIO: REMAINING                            61.5%
+
+texts/correct/small_text_correct.txt
+AVERAGE: FOUND TO MIN:                  3.614e-02
+TOTAL: FULL REQS NUM:                          30
+TOTAL: POSS MIST NUM:                           7
+RATIO: POSS MIST NUM TO FULL REQS NUM:      23.3%
+RATIO: REMAINING                            76.7%
+
+texts/correct/test_text_HPOP.txt
+AVERAGE: FOUND TO MIN:                  5.533e-02
+TOTAL: FULL REQS NUM:                         102
+TOTAL: POSS MIST NUM:                          23
+RATIO: POSS MIST NUM TO FULL REQS NUM:      22.5%
+RATIO: REMAINING                            77.5%
+
+texts/correct/mid1.txt
+AVERAGE: FOUND TO MIN:                  1.740e-02
+TOTAL: FULL REQS NUM:                          57
+TOTAL: POSS MIST NUM:                          17
+RATIO: POSS MIST NUM TO FULL REQS NUM:      29.8%
+RATIO: REMAINING                            70.2%
+
+texts/correct/mid2.txt
+AVERAGE: FOUND TO MIN:                  5.505e-02
+TOTAL: FULL REQS NUM:                         153
+TOTAL: POSS MIST NUM:                          47
+RATIO: POSS MIST NUM TO FULL REQS NUM:      30.7%
+RATIO: REMAINING                            69.3%
+
+texts/correct/large1.txt
+AVERAGE: FOUND TO MIN:                  3.838e-02
+TOTAL: FULL REQS NUM:                         696
+TOTAL: POSS MIST NUM:                         175
+RATIO: POSS MIST NUM TO FULL REQS NUM:      25.1%
+RATIO: REMAINING                            74.9%
+
+
+
+// порог для контекстно-зависимых запросов 10^-6
+Average by all texts:
+AVERAGE: FOUND TO MIN:          2.71E-002
+POSS MIST NUM TO FULL REQS NUM        11%
+REMAINING                             89%
+
+
+
+texts/correct/tiny1.txt
+AVERAGE: FOUND TO MIN:                  1.530e-01
+TOTAL: FULL REQS NUM:                          17
+TOTAL: POSS MIST NUM:                           1
+RATIO: POSS MIST NUM TO FULL REQS NUM:       5.9%
+RATIO: REMAINING                            94.1%
+
+texts/correct/tiny2.txt
+AVERAGE: FOUND TO MIN:                  2.432e-03
+TOTAL: FULL REQS NUM:                          21
+TOTAL: POSS MIST NUM:                           4
+RATIO: POSS MIST NUM TO FULL REQS NUM:      19.0%
+RATIO: REMAINING                            81.0%
+
+texts/correct/tiny3.txt
+AVERAGE: FOUND TO MIN:                  1.051e-02
+TOTAL: FULL REQS NUM:                          15
+TOTAL: POSS MIST NUM:                           2
+RATIO: POSS MIST NUM TO FULL REQS NUM:      13.3%
+RATIO: REMAINING                            86.7%
+
+texts/correct/tiny4.txt
+AVERAGE: FOUND TO MIN:                  5.876e-03
+TOTAL: FULL REQS NUM:                          30
+TOTAL: POSS MIST NUM:                           4
+RATIO: POSS MIST NUM TO FULL REQS NUM:      13.3%
+RATIO: REMAINING                            86.7%
+
+texts/correct/tiny5.txt
+AVERAGE: FOUND TO MIN:                  2.250e-02
+TOTAL: FULL REQS NUM:                          17
+TOTAL: POSS MIST NUM:                           1
+RATIO: POSS MIST NUM TO FULL REQS NUM:       5.9%
+RATIO: REMAINING                            94.1%
+
+texts/correct/tiny6.txt
+AVERAGE: FOUND TO MIN:                  1.158e-02
+TOTAL: FULL REQS NUM:                          38
+TOTAL: POSS MIST NUM:                           4
+RATIO: POSS MIST NUM TO FULL REQS NUM:      10.5%
+RATIO: REMAINING                            89.5%
+
+texts/correct/tiny7.txt
+AVERAGE: FOUND TO MIN:                  3.014e-02
+TOTAL: FULL REQS NUM:                          31
+TOTAL: POSS MIST NUM:                           5
+RATIO: POSS MIST NUM TO FULL REQS NUM:      16.1%
+RATIO: REMAINING                            83.9%
+
+texts/correct/tiny8.txt
+AVERAGE: FOUND TO MIN:                  1.413e-02
+TOTAL: FULL REQS NUM:                          12
+TOTAL: POSS MIST NUM:                           2
+RATIO: POSS MIST NUM TO FULL REQS NUM:      16.7%
+RATIO: REMAINING                            83.3%
+
+texts/correct/tiny9.txt
+AVERAGE: FOUND TO MIN:                  3.014e-03
+TOTAL: FULL REQS NUM:                          24
+TOTAL: POSS MIST NUM:                           4
+RATIO: POSS MIST NUM TO FULL REQS NUM:      16.7%
+RATIO: REMAINING                            83.3%
+
+texts/correct/tiny10.txt
+AVERAGE: FOUND TO MIN:                  9.751e-04
+TOTAL: FULL REQS NUM:                          43
+TOTAL: POSS MIST NUM:                           3
+RATIO: POSS MIST NUM TO FULL REQS NUM:       7.0%
+RATIO: REMAINING                            93.0%
+
+texts/correct/tiny11.txt
+AVERAGE: FOUND TO MIN:                  3.190e-04
+TOTAL: FULL REQS NUM:                          19
+TOTAL: POSS MIST NUM:                           1
+RATIO: POSS MIST NUM TO FULL REQS NUM:       5.3%
+RATIO: REMAINING                            94.7%
+
+texts/correct/tiny12.txt
+AVERAGE: FOUND TO MIN:                  4.675e-03
+TOTAL: FULL REQS NUM:                          13
+TOTAL: POSS MIST NUM:                           3
+RATIO: POSS MIST NUM TO FULL REQS NUM:      23.1%
+RATIO: REMAINING                            76.9%
+
+texts/correct/small_text_correct.txt
+AVERAGE: FOUND TO MIN:                  3.621e-02
+TOTAL: FULL REQS NUM:                          30
+TOTAL: POSS MIST NUM:                           1
+RATIO: POSS MIST NUM TO FULL REQS NUM:       3.3%
+RATIO: REMAINING                            96.7%
+
+texts/correct/test_text_HPOP.txt
+AVERAGE: FOUND TO MIN:                  5.526e-02
+TOTAL: FULL REQS NUM:                         102
+TOTAL: POSS MIST NUM:                           4
+RATIO: POSS MIST NUM TO FULL REQS NUM:       3.9%
+RATIO: REMAINING                            96.1%
+
+texts/correct/mid1.txt
+AVERAGE: FOUND TO MIN:                  1.718e-02
+TOTAL: FULL REQS NUM:                          57
+TOTAL: POSS MIST NUM:                           6
+RATIO: POSS MIST NUM TO FULL REQS NUM:      10.5%
+RATIO: REMAINING                            89.5%
+
+texts/correct/mid2.txt
+AVERAGE: FOUND TO MIN:                  5.490e-02
+TOTAL: FULL REQS NUM:                         153
+TOTAL: POSS MIST NUM:                          15
+RATIO: POSS MIST NUM TO FULL REQS NUM:       9.8%
+RATIO: REMAINING                            90.2%
+
+texts/correct/large1.txt
+AVERAGE: FOUND TO MIN:                  3.850e-02
+TOTAL: FULL REQS NUM:                         696
+TOTAL: POSS MIST NUM:                          49
+RATIO: POSS MIST NUM TO FULL REQS NUM:       7.0%
+RATIO: REMAINING                            93.0%
+
+
+
+// порог для контекстно-зависимых запросов 1.6 x 10^-6
+Average by all texts:
+AVERAGE: FOUND TO MIN:          3.98E-002
+POSS MIST NUM TO FULL REQS NUM
+REMAINING
+
+
+
+texts/correct/tiny1.txt
+AVERAGE: FOUND TO MIN:                  1.527e-01
+TOTAL: FULL REQS NUM:                          17
+TOTAL: POSS MIST NUM:                           2
+RATIO: POSS MIST NUM TO FULL REQS NUM:      11.8%
+RATIO: REMAINING                            88.2%
+
+texts/correct/tiny2.txt
+AVERAGE: FOUND TO MIN:                  2.424e-03
+TOTAL: FULL REQS NUM:                          21
+TOTAL: POSS MIST NUM:                           4
+RATIO: POSS MIST NUM TO FULL REQS NUM:      19.0%
+RATIO: REMAINING                            81.0%
+
+texts/correct/tiny3.txt
+AVERAGE: FOUND TO MIN:                  1.048e-02
+TOTAL: FULL REQS NUM:                          15
+TOTAL: POSS MIST NUM:                           2
+RATIO: POSS MIST NUM TO FULL REQS NUM:      13.3%
+RATIO: REMAINING                            86.7%
+
+texts/correct/tiny4.txt
+AVERAGE: FOUND TO MIN:                  5.873e-03
+TOTAL: FULL REQS NUM:                          30
+TOTAL: POSS MIST NUM:                           6
+RATIO: POSS MIST NUM TO FULL REQS NUM:      20.0%
+RATIO: REMAINING                            80.0%
+
+texts/correct/tiny5.txt
+AVERAGE: FOUND TO MIN:                  2.249e-02
+TOTAL: FULL REQS NUM:                          17
+TOTAL: POSS MIST NUM:                           2
+RATIO: POSS MIST NUM TO FULL REQS NUM:      11.8%
+RATIO: REMAINING                            88.2%
+
+texts/correct/tiny6.txt
+AVERAGE: FOUND TO MIN:                  1.166e-02
+TOTAL: FULL REQS NUM:                          38
+TOTAL: POSS MIST NUM:                           5
+RATIO: POSS MIST NUM TO FULL REQS NUM:      13.2%
+RATIO: REMAINING                            86.8%
+
+texts/correct/tiny7.txt
+AVERAGE: FOUND TO MIN:                  3.021e-02
+TOTAL: FULL REQS NUM:                          31
+TOTAL: POSS MIST NUM:                           5
+RATIO: POSS MIST NUM TO FULL REQS NUM:      16.1%
+RATIO: REMAINING                            83.9%
+
+texts/correct/tiny8.txt
+AVERAGE: FOUND TO MIN:                  1.442e-02
+TOTAL: FULL REQS NUM:                          12
+TOTAL: POSS MIST NUM:                           2
+RATIO: POSS MIST NUM TO FULL REQS NUM:      16.7%
+RATIO: REMAINING                            83.3%
+
+texts/correct/tiny9.txt
+AVERAGE: FOUND TO MIN:                  3.017e-03
+TOTAL: FULL REQS NUM:                          24
+TOTAL: POSS MIST NUM:                           4
+RATIO: POSS MIST NUM TO FULL REQS NUM:      16.7%
+RATIO: REMAINING                            83.3%
+
+texts/correct/tiny10.txt
+AVERAGE: FOUND TO MIN:                  9.700e-04
+TOTAL: FULL REQS NUM:                          43
+TOTAL: POSS MIST NUM:                           4
+RATIO: POSS MIST NUM TO FULL REQS NUM:       9.3%
+RATIO: REMAINING                            90.7%
+
+texts/correct/tiny11.txt
+AVERAGE: FOUND TO MIN:                  3.203e-04
+TOTAL: FULL REQS NUM:                          19
+TOTAL: POSS MIST NUM:                           2
+RATIO: POSS MIST NUM TO FULL REQS NUM:      10.5%
+RATIO: REMAINING                            89.5%
+
+texts/correct/tiny12.txt
+AVERAGE: FOUND TO MIN:                  4.706e-03
+TOTAL: FULL REQS NUM:                          13
+TOTAL: POSS MIST NUM:                           3
+RATIO: POSS MIST NUM TO FULL REQS NUM:      23.1%
+RATIO: REMAINING                            76.9%
+
+texts/correct/small_text_correct.txt
+AVERAGE: FOUND TO MIN:                  3.503e-02
+TOTAL: FULL REQS NUM:                          30
+TOTAL: POSS MIST NUM:                           2
+RATIO: POSS MIST NUM TO FULL REQS NUM:       6.7%
+RATIO: REMAINING                            93.3%
+
+texts/correct/test_text_HPOP.txt
+AVERAGE: FOUND TO MIN:                  5.596e-02
+TOTAL: FULL REQS NUM:                         102
+TOTAL: POSS MIST NUM:                           7
+RATIO: POSS MIST NUM TO FULL REQS NUM:       6.9%
+RATIO: REMAINING                            93.1%
+
+texts/correct/mid1.txt
+AVERAGE: FOUND TO MIN:                  1.728e-02
+TOTAL: FULL REQS NUM:                          57
+TOTAL: POSS MIST NUM:                           8
+RATIO: POSS MIST NUM TO FULL REQS NUM:      14.0%
+RATIO: REMAINING                            86.0%
+
+texts/correct/mid2.txt
+AVERAGE: FOUND TO MIN:                  5.484e-02
+TOTAL: FULL REQS NUM:                         153
+TOTAL: POSS MIST NUM:                          20
+RATIO: POSS MIST NUM TO FULL REQS NUM:      13.1%
+RATIO: REMAINING                            86.9%
+
+// часть запросов поломалась, из-за превышения лимита
+// его не учитывать
+texts/correct/large1.txt
+AVERAGE: FOUND TO MIN:                  2.549e-01
+TOTAL: FULL REQS NUM:                         696
+TOTAL: POSS MIST NUM:                          69
+RATIO: POSS MIST NUM TO FULL REQS NUM:       9.9%
+RATIO: REMAINING                            90.1%
