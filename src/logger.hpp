@@ -7,7 +7,7 @@
 struct logger {
 
 public:
-    logger(std::string const &mode);
+    logger(std::string const& mode);
 
     template <typename T>
     logger& operator<<(T const& info)
@@ -19,8 +19,8 @@ public:
     void print_log();
 
     std::string const& get_severity() const;
-    logger(logger const &) = delete;
-    logger &operator=(logger const &) = delete;
+    logger(logger const&) = delete;
+    logger &operator=(logger const&) = delete;
 
 private:
 

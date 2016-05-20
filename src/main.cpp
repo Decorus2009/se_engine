@@ -1,14 +1,8 @@
 #include "yandex_requester.hpp"
 #include "prepositions_dictionary.hpp"
 #include "text_analyzer.hpp"
-#include "logger.hpp"
-#include <iostream>
-#include <fstream>
-#include <sstream>
 #include <algorithm>
 #include <iomanip>
-#include <ctime>
-#include <locale>
 
 #include <math.h>
 

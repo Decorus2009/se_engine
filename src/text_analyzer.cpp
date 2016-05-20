@@ -1,13 +1,6 @@
 #include "text_analyzer.hpp"
-#include <fstream>
-#include <iostream>
 #include <iomanip>
-#include <vector>
 #include <algorithm>
-#include <ctype.h>
-#include <locale>
-#include <tuple>
-#include <regex.h>
 
 using std::map;
 using std::pair;
@@ -19,7 +12,8 @@ using std::tuple;
 
 static yandex_requester requester;
 
-text_analyzer::text_analyzer(std::ifstream& text_file, string const& thr_type) try : dictionary_(), thr_type_(thr_type)
+text_analyzer::text_analyzer(std::ifstream& text_file, string const& thr_type)
+try : dictionary_(), thr_type_(thr_type)
 {
     text_ << text_file.rdbuf();
 }
@@ -50,7 +44,8 @@ void text_analyzer::use_fixed_context_dep_thr(long long full_req_res, vector<str
                                               string const& preposition, prepositions_dictionary& dictionary,
                                               size_t line_counter, size_t word_counter)
 {
-    sent_req_inf_.push_back({false, "* " + preposition, (long long)dictionary[preposition], line_counter, word_counter, preposition, dictionary[preposition]});
+    sent_req_inf_.push_back({false, "* " + preposition, (long long)dictionary[preposition],
+                             line_counter, word_counter, preposition, dictionary[preposition]});
 
     // для вычисления минимума
     vector<long long> word_and_prep_res;
@@ -62,7 +57,8 @@ void text_analyzer::use_fixed_context_dep_thr(long long full_req_res, vector<str
         {
             long long req_res = requester.send_request(req_v[i]);
 
-            sent_req_inf_.push_back({false, req_v[i], req_res, line_counter, word_counter, preposition, dictionary[preposition]});
+            sent_req_inf_.push_back({false, req_v[i], req_res, line_counter,
+                                     word_counter, preposition, dictionary[preposition]});
 
             word_and_prep_res.push_back(req_res);
         }
@@ -70,7 +66,8 @@ void text_analyzer::use_fixed_context_dep_thr(long long full_req_res, vector<str
 
     long long min_val = *(std::min_element(word_and_prep_res.begin(), word_and_prep_res.end()));
 
-    sent_req_inf_.push_back({false, "*** MIN", min_val, line_counter, word_counter, preposition, dictionary[preposition]});
+    sent_req_inf_.push_back({false, "*** MIN", min_val,
+                             line_counter, word_counter, preposition, dictionary[preposition]});
     // для пропуска строки в выводе в лог
     sent_req_inf_.push_back({false, "$$$", 0, 0, 0, "", 0});
 
@@ -311,8 +308,6 @@ void text_analyzer::send_and_log_requests(vector<pair<string, size_t> > const& s
 
 void text_analyzer::analyze(logger &log, std::ofstream& thr_stat_file)
 {
-    yandex_requester requester;
-
     string log_mode = log.get_severity();
 
     string line;
@@ -378,7 +373,7 @@ void text_analyzer::analyze(logger &log, std::ofstream& thr_stat_file)
 
                             size_t len = it->second;
 
-                            send_and_log_requests(sentence, i, len, /*requester,*/ line_counter,
+                            send_and_log_requests(sentence, i, len, line_counter,
                                                   sentence[i].second, dictionary_, it->first);
 
                             i += len - 1;
@@ -388,7 +383,6 @@ void text_analyzer::analyze(logger &log, std::ofstream& thr_stat_file)
                     }
                 }
                 sentence.clear();
-                //continue;
             }
         }
     }
@@ -512,7 +506,6 @@ void text_analyzer::write_thr_stat(T& stream, double sum_found_to_min, int count
 }
 bool text_analyzer::is_end(string const& word)
 {
-    // исключение - предлог o'. not yet implemented
     return !isalpha(word[word.length() - 1]);
 }
 bool text_analyzer::is_article(string const& word)

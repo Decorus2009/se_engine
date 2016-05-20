@@ -1,6 +1,5 @@
 #include <fstream>
 #include <iostream>
-#include <string>
 #include "prepositions_dictionary.hpp"
 
 prepositions_dictionary::prepositions_dictionary()
@@ -14,15 +13,11 @@ prepositions_dictionary::prepositions_dictionary()
     // тут и так летит наверх, не надо throw;
     catch (std::ifstream::failure e)
     {
-        //std::cerr << "Error: could not open dictionary file" << std::endl;
-        throw;
+        std::cerr << "Error: could not open dictionary file" << std::endl;
     }
 
-
     // почему не работает??
-//    prepositions_list.clear();
-
-
+    //    prepositions_list.clear();
     // приходится использовать
     prepositions_list.exceptions(std::ifstream::goodbit);
     std::string preposition;

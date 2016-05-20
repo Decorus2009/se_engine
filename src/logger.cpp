@@ -1,7 +1,7 @@
 #include <iostream>
 #include "logger.hpp"
 
-logger::logger(std::string const &mode)
+logger::logger(std::string const& mode)
 {
     severity_ = mode;
 }

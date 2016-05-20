@@ -1,7 +1,6 @@
 #include "yandex_requester.hpp"
 #include <iostream>
 #include <sstream>
-
 #include <fstream>
 
 using std::string;
@@ -17,8 +16,6 @@ long long yandex_requester::send_request(std::string const &req_str)
     std::ofstream xml_file("xml_resp.xml");
     xml_file << xml;
 
-    // если вернулся xml, в котором нет найденных результатов вообще, только сообщение об ошибке
-    // вернуть 0 найденных документов
     if (xml.find("Sorry, there are no results for this search") != string::npos ||
         xml.find("Request limit reached") != string::npos)
     {
@@ -38,9 +35,9 @@ yandex_requester::yandex_xml_parser::yandex_xml_parser() {}
 void yandex_requester::
 yandex_xml_parser::start_tag(void *data, const char *element, const char **attribute)
 {
-    if (string(element) == "found-docs"
-        && string(attribute[0]) == "priority"
-        && string(attribute[1]) == "all")
+    if (string(element) == "found-docs" &&
+        string(attribute[0]) == "priority" &&
+        string(attribute[1]) == "all")
     {
         found_docs_tag_found = true;
     }
@@ -112,8 +109,6 @@ string yandex_requester::yandex_request_sender::send_curl_request(std::string co
 {
     //showmecaptcha_ = "yes";                                                    //попытка отключения автоисправления поиска
     string url_ = ya_addr_ + "user=" + user_ + "&key=" + api_key_ + "&l10n=en&filter=moderate" + "&noreask=1";
-
-    //надо сделать поддержку percent-encoding
 
     string request = (string)"<?xml version=\"1.0\" encoding=\"UTF-8\"?><request><query>" + "&quot;" + query + "&quot;" +
                      "</query><sortby>rlv</sortby><maxpassages>1</maxpassages><page>0</page>" +
