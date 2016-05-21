@@ -42,7 +42,7 @@ void text_analyzer::use_fixed_thr(int req_type, string const& req, long long req
 
 void text_analyzer::use_fixed_context_dep_thr(long long full_req_res, vector<string> const& req_v,
                                               string const& preposition, prepositions_dictionary& dictionary,
-                                              size_t line_counter, size_t word_counter)
+                                              size_t line_counter, size_t word_counter, stringstream& ya_req_res_stream)
 {
     sent_req_inf_.push_back({false, "* " + preposition, (long long)dictionary[preposition],
                              line_counter, word_counter, preposition, dictionary[preposition]});
@@ -53,9 +53,24 @@ void text_analyzer::use_fixed_context_dep_thr(long long full_req_res, vector<str
 
     for (int i = 0; i < req_v.size(); ++i)
     {
+        // сам предлог предпосчитан
         if (!req_v[i].empty() && i != 2)
         {
-            long long req_res = requester.send_request(req_v[i]);
+
+
+
+
+
+//            long long req_res = requester.send_request(req_v[i]);
+//            ya_req_res_file << req_res << std::endl;
+            string ya_req_res_line;
+            getline(ya_req_res_stream, ya_req_res_line);
+            long long req_res = std::stoll(ya_req_res_line);
+
+
+
+
+
 
             sent_req_inf_.push_back({false, req_v[i], req_res, line_counter,
                                      word_counter, preposition, dictionary[preposition]});
@@ -251,7 +266,8 @@ build_requests(vector<pair<string, size_t>> const& sentence, size_t begin_ind, s
 
 void text_analyzer::send_and_log_requests(vector<pair<string, size_t> > const& sentence, size_t begin_ind, size_t len,
                                           size_t line_counter, size_t word_counter,
-                                          prepositions_dictionary& dictionary, string const& preposition)
+                                          prepositions_dictionary& dictionary, string const& preposition,
+                                          stringstream& ya_req_res_stream)
 {
     auto requests = build_requests(sentence, begin_ind, len);
 
@@ -289,7 +305,18 @@ void text_analyzer::send_and_log_requests(vector<pair<string, size_t> > const& s
 
 
     // в любом случае шлем полноценный запрос. Потом - опционально в зависимости от типа порога
-    long long full_req_res = requester.send_request(req_v[2]);
+//    long long full_req_res = requester.send_request(req_v[2]);
+//    ya_req_res_file << full_req_res << std::endl;
+
+
+    string ya_full_req_res_line;
+    getline(ya_req_res_stream, ya_full_req_res_line);
+    long long full_req_res = std::stoll(ya_full_req_res_line);
+
+
+
+
+
     sent_req_inf_.push_back({true, req_v[2], full_req_res, line_counter, word_counter, preposition, dictionary[preposition]});
 
     if (thr_type_ == "-fixed")
@@ -298,7 +325,7 @@ void text_analyzer::send_and_log_requests(vector<pair<string, size_t> > const& s
     }
     else if (thr_type_ == "-fixed_context_dep")
     {
-        use_fixed_context_dep_thr(full_req_res, req_v, preposition, dictionary, line_counter, word_counter);
+        use_fixed_context_dep_thr(full_req_res, req_v, preposition, dictionary, line_counter, word_counter, ya_req_res_stream);
     }
     else if (thr_type_ == "-dynamic_context_dep")
     {
@@ -306,7 +333,7 @@ void text_analyzer::send_and_log_requests(vector<pair<string, size_t> > const& s
     }
 }
 
-void text_analyzer::analyze(logger &log, std::ofstream& thr_stat_file)
+void text_analyzer::analyze(logger &log, std::ofstream& thr_stat_file, stringstream& ya_req_res_stream, std::ofstream& aver_res_file)
 {
     string log_mode = log.get_severity();
 
@@ -374,7 +401,7 @@ void text_analyzer::analyze(logger &log, std::ofstream& thr_stat_file)
                             size_t len = it->second;
 
                             send_and_log_requests(sentence, i, len, line_counter,
-                                                  sentence[i].second, dictionary_, it->first);
+                                                  sentence[i].second, dictionary_, it->first, ya_req_res_stream);
 
                             i += len - 1;
                             possible_prepositions.clear();
@@ -386,11 +413,12 @@ void text_analyzer::analyze(logger &log, std::ofstream& thr_stat_file)
             }
         }
     }
-    write_log(log, log_mode, thr_stat_file);
+    write_log(log, log_mode, thr_stat_file, aver_res_file);
 }
 
 
-void text_analyzer::write_log(logger& log, string const& log_mode, std::ofstream& thr_stat_file)
+void text_analyzer::write_log(logger& log, string const& log_mode,
+                              std::ofstream& thr_stat_file, std::ofstream& aver_res_file)
 {
     using std::setw;
     using std::setprecision;
@@ -399,6 +427,21 @@ void text_analyzer::write_log(logger& log, string const& log_mode, std::ofstream
 
     double sum_found_to_min = 0;
     int counter_found_to_min = 0;
+
+    long long full_req_res = 0;
+//    for (int i = 0; i < sent_req_inf_.size(); ++i)
+//    {
+//        if (sent_req_inf_[i].is_full_req_)
+//        {
+//            full_req_res = sent_req_inf_[i].res_;
+//        }
+//        if (sent_req_inf_[i].req_ == "*** MIN")
+//        {
+//            // тут sent_req_inf_[i].res_ - минимум, вычисленный и записанный в структуру ранее
+//            sum_found_to_min += (double)full_req_res / sent_req_inf_[i].res_;
+//            ++counter_found_to_min;
+//        }
+//    }
 
     if (log_mode == "-d")
     {
@@ -417,7 +460,7 @@ void text_analyzer::write_log(logger& log, string const& log_mode, std::ofstream
         log << (string)"\n" << "RESULTS:\n";
 
 
-        long long full_req_res = 0;
+        full_req_res = 0;
         for (int i = 0; i < sent_req_inf_.size(); ++i)
         {
             if (sent_req_inf_[i].req_ == "$$$") { log << (string)"\n"; continue; }
@@ -458,27 +501,37 @@ void text_analyzer::write_log(logger& log, string const& log_mode, std::ofstream
     }
     log << (string)"\n";
 
-
-    for (int i = 0; i < possible_mistakes_.size(); ++i)
+    if (log_mode != "-n")
     {
-        log << "Possible mistake!"
+        for (int i = 0; i < possible_mistakes_.size(); ++i)
+        {
+            log << "Possible mistake!"
             << setw(6) << "Line:"
             << setw(3) << possible_mistakes_[i].line_c_
             << setw(6) << "word:"
             << setw(3) << possible_mistakes_[i].word_c_ << ":"
             << setw(36) << possible_mistakes_[i].req_ << (string)"\n";
-    }
-    log << (string)"\n";
+        }
+        log << (string)"\n";
 
-    write_thr_stat(log, sum_found_to_min, counter_found_to_min);
-    write_thr_stat(thr_stat_file, sum_found_to_min, counter_found_to_min);
+
+        write_thr_stat(log, sum_found_to_min, counter_found_to_min);
+//        write_thr_stat(thr_stat_file, sum_found_to_min, counter_found_to_min);
+    }
+
+
+    double poss_mist_to_full_req_ratio = (double)possible_mistakes_.size() / all_preps_.size();
+    double remaining = 1.0 - poss_mist_to_full_req_ratio;
+    aver_res_file << setprecision(1) << fixed << poss_mist_to_full_req_ratio * 100 << std::endl;
+    aver_res_file << setprecision(1) << fixed << remaining * 100 << std::endl;
+
+
 }
 
 // utilities
 template<class T>
 void text_analyzer::write_thr_stat(T& stream, double sum_found_to_min, int counter_found_to_min)
 {
-
     using std::setw;
     using std::setprecision;
     using std::scientific;
@@ -492,6 +545,8 @@ void text_analyzer::write_thr_stat(T& stream, double sum_found_to_min, int count
     stream << "TOTAL: POSS MIST NUM:"
            << setw(28) << possible_mistakes_.size() << (string)"\n";
 
+
+    // дублирование кода
     double poss_mist_to_full_req_ratio = (double)possible_mistakes_.size() / all_preps_.size();
     stream << "RATIO: POSS MIST NUM TO FULL REQS NUM:"
            << setprecision(1)

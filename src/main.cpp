@@ -10,14 +10,15 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-    if (argc != 4)
+    // argv[4] - файл, в который записать результаты запросов Я
+    if (argc != 6)
     {
         std::cerr << "Usage: [mode] [thr type] [file]" << std::endl;
         return 1;
     }
 
     logger log(argv[1]);
-    if (string(argv[1]) != "-d" && string(argv[1]) == "-r")
+    if (string(argv[1]) != "-d" && string(argv[1]) != "-r" && string(argv[1]) != "-n")
     {
         std::cerr << "Wrong mode" << std::endl;
         return 1;
@@ -37,9 +38,21 @@ int main(int argc, char **argv)
         thr_stat_file << endl << (string)argv[3] << endl;
 
 
-        analyzer.analyze(log, thr_stat_file);
-        std::cout << std::endl;
-        log.print_log();
+        // записанный файл с результатами запросов, для автономности
+        ifstream ya_req_res_file;
+        ya_req_res_file.open(argv[4], std::ios_base::app);
+        stringstream ya_req_res_stream;
+        ya_req_res_stream << ya_req_res_file.rdbuf();
+
+        ofstream aver_res_file;
+        aver_res_file.open(argv[5], std::ios_base::app);
+
+        analyzer.analyze(log, thr_stat_file, ya_req_res_stream, aver_res_file);
+//        std::cout << std::endl;
+        if (string(argv[1]) != "-n")
+        {
+            log.print_log();
+        }
     }
     catch (std::ifstream::failure e)
     {
@@ -53,7 +66,7 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    cout << "runtime = " << clock()/1000.0 << endl;
+    //cout << "runtime = " << clock()/1000.0 << endl;
 
 //    // на этом коде ide выводит в консоль только часть результатов, почему?
 //    prepositions_dictionary dictionary;

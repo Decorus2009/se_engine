@@ -1,0 +1,7 @@
+
+incorrect_en_small.txt
+AVERAGE: FOUND TO MIN:                       -nan
+TOTAL: FULL REQS NUM:                           0
+TOTAL: POSS MIST NUM:                           0
+RATIO: POSS MIST NUM TO FULL REQS NUM:      -nan%
+RATIO: REMAINING                            -nan%

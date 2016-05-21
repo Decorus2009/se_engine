@@ -8,11 +8,10 @@ logger::logger(std::string const& mode)
 
 void logger::print_log()
 {
-
     std::cout << "LOG: " << std::endl
-    << "-----------------------------------------------------"
-    << "-----------------------------------------------------" << std::endl
-    << storage_.str() << std::endl;
+              << "-----------------------------------------------------"
+              << "-----------------------------------------------------" << std::endl
+              << storage_.str() << std::endl;
 }
 
 std::string const &logger::get_severity() const

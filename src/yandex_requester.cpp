@@ -17,7 +17,8 @@ long long yandex_requester::send_request(std::string const &req_str)
     xml_file << xml;
 
     if (xml.find("Sorry, there are no results for this search") != string::npos ||
-        xml.find("Request limit reached") != string::npos)
+        xml.find("Request limit reached") != string::npos ||
+        xml.find("list of permitted IP addresses") != string::npos)
     {
         return 0;
     }

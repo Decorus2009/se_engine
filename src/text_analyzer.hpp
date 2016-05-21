@@ -17,7 +17,7 @@ public:
     text_analyzer(text_analyzer const&) = delete;
     text_analyzer &operator=(text_analyzer const&) = delete;
 
-    void analyze(logger &log, std::ofstream& thr_stat_file);
+    void analyze(logger &log, std::ofstream& thr_stat_file, std::stringstream& ya_req_res_stream, std::ofstream& aver_res_file);
 
 
     // FOR GTEST
@@ -56,13 +56,15 @@ private:
 
     void use_fixed_context_dep_thr(long long full_req_res, std::vector<std::string> const& req_v,
                                    std::string const& preposition, prepositions_dictionary& dictionary,
-                                   size_t line_counter, size_t word_counter);
+                                   size_t line_counter, size_t word_counter,
+                                   std::stringstream& ya_req_res_stream);
 
     void send_and_log_requests(std::vector<std::pair<std::string, size_t> > const& sentence, size_t begin_ind,
-                               size_t len, /*yandex_requester& requester, */size_t line_counter, size_t word_counter,
-                               prepositions_dictionary& dictionary, std::string const& preposition);
+                               size_t len, size_t line_counter, size_t word_counter,
+                               prepositions_dictionary& dictionary, std::string const& preposition,
+                               std::stringstream& ya_req_res_stream);
 
-    void write_log(logger& log, std::string const& log_mode, std::ofstream& thr_stat_file);
+    void write_log(logger& log, std::string const& log_mode, std::ofstream& thr_stat_file, std::ofstream& aver_res_file);
     template<class T>
     void write_thr_stat(T& t, double sum_found_to_min, int counter_found_to_min);
 
