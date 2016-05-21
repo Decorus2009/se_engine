@@ -43,7 +43,7 @@ do
 done
 
 
-g++ -std=c++11 averaging/calc_aver/main.cpp -o aver
+g++ -std=c++11 calc_aver/main.cpp -o aver
 ./aver
 
 # очищаем файл, чтобы при следующем запуске работать с ним как с новым, т.к. в него идет дозапись
